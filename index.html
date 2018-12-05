@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thanh Lai</title>
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+
+    </link>
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <nav id="navbar">
+            <div class="nav-item">
+                <a href="#about">About</a>
+            </div>
+            <div class="nav-item">
+                <a href="#portfolio">Portfolio</a>
+            </div>
+            <div class="nav-item">
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="logo-container">
+        <img id="logo" src="images/logo.png" />
+
+        <!-- <audio controls autoplay loop volume="0.5">
+            <iframe src="audio/silence.mp3" allow="autoplay"></iframe>
+            <source src="audio/tranquil.mp3" type="audio/ogg">
+            <source src="audio/tranquil.mp3" type="audio/mpeg">
+        </audio> -->
+    </div>
+
+    <section class="gallary-container">
+        <h3 id="gallary-name">Me Around the World</h3>
+
+        <div class="slide-show-container">
+            <div id="play-pause-btn" onclick="playPauseSLides()"></div>
+            <div class="left-arrow" onclick="plusSLides(-1)">
+                <span class="arrow arrow-left"></span>
+            </div>
+            <div class="right-arrow" onclick="plusSLides(1)">
+                <span class="arrow arrow-right"></span>
+            </div>
+            <div class="caption-holder">
+                <p class="caption-text"></p>
+            </div>
+            <div class="image-holder">
+                <div class="number-text">1 / 4</div>
+                <img src="images/bg/maine.jpg">
+                <p class="caption-text">Portland Head Lighthouse - Portland, Maine</p>
+            </div>
+            <div class="image-holder">
+                <div class="number-text">2 / 4</div>
+                <img src="images/bg/atlantic-ocean.jpg">
+                <p class="caption-text">Somewhere on the Atlantic Ocean</p>
+            </div>
+            <div class="image-holder">
+                <div class="number-text">3 / 4</div>
+                <img src="images/bg/montreal.jpg">
+                <p class="caption-text">Jacques Cartier Bridge - Montreal, Canada</p>
+            </div>
+            <div class="image-holder">
+                <div class="number-text">4 / 4</div>
+                <img src="images/bg/shanghai.jpg">
+                <p class="caption-text">The Bund waterfront - Shanghai, China</p>
+            </div>
+        </div>
+        <div id="dots-container"></div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="flex">
+            <div id="headshot">
+                <img src="images/profile-pic.png">
+            </div>
+            <p id="about-me">
+                <strong>Hi, my name is Thanh!</strong> I am a Software Engineer in New York City. My most enduring
+                trait is my curiosity
+                and that shows in my willingness to learn. My hobbies include watching my beloved Manchester United,
+                tranquil hikes, and long directionless strolls. Besides computer science, I like to seek out long
+                meaningful conversations
+                in a range of topics include animals, history, science, politics, and geopolitics. I drink way too much
+                bubble tea and I
+                find myself watching too many dog videos on youtube. I have a notably horrendous track record of
+                judging
+                how long to microwave
+                something and I strongly believe unsolicited pop ups are the root of all evil.
+            </p>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <h2>My Portfolio</h2>
+        <div id="download-text">
+            <strong>Download my Resume!</strong>
+        </div>
+        <div id="download-resume">
+            <a href="resume/Thanh-Lai-Resume.pdf" download target="_blank">
+                <img id="resume-btn" src="images/download.png">
+            </a>
+        </div>
+
+        <div class="timeline">
+            <div class="container right">
+                <div class="content">
+                    <h3 class="portfolio-title">December 2018: "Keep It Up"</h3 class="portfolio-title">
+                    <p>
+                        *In Progress
+                        <br>
+                        Developer:
+                        <span>
+                            <a></a>
+                            <a></a>
+                        </span>
+                        <ul>
+                            <li>Developing a platform for users to keep track of their goals</li>
+                            <li>Built with HTML, CSS, JavaScript, React, Redux, Node/Express.</li>
+                            <li>Users can create account, make new goals, record daily goals, and get points for
+                                accomplishing goals.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h3 class="portfolio-title">November 2018: Personal Site</h3 class="portfolio-title">
+                    <p>
+                        Sole Developer:
+                        <span>
+                            <a></a>
+                            <a></a>
+                        </span>
+                        <ul>
+                            <li>Developed personal portfolio website</li>
+                            <li>Built with HTML, CSS, JavaScript, jQuery, AlertifyJS, ScrollMagic</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                    <h3 class="portfolio-title">July 2018: "Code O"</h3 class="portfolio-title">
+                    <p>
+                        Developer:
+                        <span>
+                            <a href="https://github.com/Code-O/Code-O" target="_blank">GitHub</a>
+                            <a href="http://code-o.herokuapp.com/" target="_blank">Live</a>
+                        </span>
+                        <ul>
+                            <li>Developed a platform to test the performance of a user’s javaScript code.</li>
+                            <li>Built with Node/Express, React, React-Redux, Sequelize, Docker, CORS, Victory, HTML5,
+                                CSS.</li>
+                            <li>Installed microservice server that runs a docker container which evaluates and measures
+                                input code.</li>
+                            <li>Implemented the functionality to evaluate the performance of a user’s code.</li>
+                            <li>Structured the data visualization graph with Victory using the data outputted from the
+                                docker container.</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="container left">
+                <div class="content">
+                    <h3 class="portfolio-title">June 2018: "Leggo my Lego"</h3 class="portfolio-title">
+                    <p>
+                        Sole Developer:
+                        <span>
+                            <a href="https://github.com/Thanh-Lai/Stackathon-Leggo-my-Lego" target="_blank">GitHub</a>
+                            <a href="http://www.leggo-my-lego.com/" target="_blank">Live*</a>
+                        </span>
+                        <ul>
+                            <li>Developed a breakout game over a 4 day period using Phaser3.js, Webpack, Babel.</li>
+                            <li>Structured stages for each level and implemented game physics using Phaser3.js.</li>
+                        </ul>
+                        * May take a few seconds to load.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="contact-info">Contact Me</h2>
+        <div class="contact-info">
+            <p class="contact-field">Email: </p>
+            &nbsp
+            <p> tlai1122@gmail.com</p>
+        </div>
+        <div class="contact-info">
+            <p class="contact-field">Phone Number: </p>
+            &nbsp
+            <p> (201) 993-8834</p>
+        </div>
+        <div class="contact-info">
+            <div class="popup-container">
+                <a class="button" href="#popup">Email me</a>
+                <div class="popup" id="popup">
+                    <div class="popup-inner">
+                        <div class="popup__text">
+                            <h1>Lets get coffee or bubble tea!</h1>
+                            <form >
+                                <label for="name">Name:</label> <br/>
+                                <input type="text" id="name" name="name" required><br/><br/>
+                                <label for="email">Email:</label><br/>
+                                <input type="text" id="email" name="email" required><br><br/>
+                                <label for="subject">Subject:</label><br/>
+                                <input type="text" id="subject" name="subject" ><br><br/>
+                                <label for="message">Message:</label><br/>
+                                <textarea id="message" name="message" rows="10" cols="50" required></textarea><br><br>
+                                <input type="reset" value="Reset">
+                                <input type="submit" value="Send">
+                            </form>
+                        </div>
+                        <a class="popup__close" href="#contact">X</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow contact-info">
+            <a class="a2a_button_twitter" data-a2a-follow="tlaiful"></a>
+            <a class="a2a_button_linkedin" data-a2a-follow="thanhlai"></a>
+            <a class="a2a_button_github" data-a2a-follow="Thanh-Lai"></a>
+            <a class="a2a_button_medium" data-a2a-follow="tlai1122"></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+    </footer>
+    </div>
+</body>
+
+</html>
