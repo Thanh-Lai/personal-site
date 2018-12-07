@@ -784,8 +784,6 @@ audio {
   display: none; /* makes the field not visible to humans */
 }
 
-
-
 .footer {
   width: 100vw;
   height: 4em;
@@ -1077,8 +1075,6 @@ audio {
     height: 200px;
     margin: -45px;
   }
-
-
 }
 
 @media (max-width: 350px) {
