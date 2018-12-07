@@ -933,9 +933,22 @@ audio {
   }
 
   #invalid-text {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+
+  #invalid-text::after {
+    content: "Please enter valid a email!";
+    visibility: visible;
+    display: block;
+    position: absolute;
     height: 200px;
     padding: 5px;
-    margin: 5px;
+    margin: -80px;
+    padding-left: 50px;
+    padding-top: 25px;
+    font-size: 12px;
   }
 
 }
@@ -1003,7 +1016,8 @@ audio {
     height: 200px;
     padding: 5px;
     margin: -80px;
-    padding-left: 30px;
+    padding-left: 35px;
+    padding-top: 25px;
     font-size: 12px;
   }
 }
