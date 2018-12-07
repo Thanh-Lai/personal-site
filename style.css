@@ -764,6 +764,14 @@ audio {
     text-decoration: none;
 }
 
+.email-btn:hover {
+  background-color: #f39c12;
+}
+
+#honeypot {
+  display: none; /* makes the field not visible to humans */
+}
+
 
 
 .footer {
@@ -790,6 +798,16 @@ audio {
   #portfolio {
     height: 1850px
   }
+
+  .popup .popup__text h1 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .popup .popup-inner {
+    max-height: 700px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -809,6 +827,22 @@ audio {
   #portfolio {
     height: 2050px
   }
+
+  .popup .popup__text h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .popup .popup__text {
+
+    padding: 3.5rem;
+}
+
+  #message {
+    width: 300px;
+    height: 100px;
+  }
+
 }
 
 @media (max-width: 650px) {
@@ -836,6 +870,47 @@ audio {
     height: 1550px
   }
 
+  #message {
+    width: 230px;
+    height: 70px;
+  }
+
+  #invalid-text {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  #message {
+    width: 230px;
+    height: 50px;
+  }
+  .popup .popup-inner {
+    max-height: 800px;
+  }
+
+  #email-me-text {
+    visibility: hidden;
+  }
+
+  #email-me-text::after {
+    content: "Lets get Coffee!";
+    visibility: visible;
+    display: block;
+    padding: 5px;
+    top: 50px;
+    position: absolute;
+  }
+  #email-fields {
+   height: 500px;
+  }
+
+  #invalid-text {
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
+  }
+
 }
 
 @media (max-width: 500px) {
@@ -853,12 +928,39 @@ audio {
     height: 1600px
   }
 
+  #message {
+    width: 200px;
+    height: 30px;
+  }
+
+  #email-me-text {
+    visibility: hidden;
+  }
+
+  #email-me-text::after {
+    content: "Lets get Coffee!";
+    visibility: visible;
+    display: block;
+    padding: 5px;
+    top: 50px;
+    position: absolute;
+  }
+
 }
 
 @media (max-width: 450px) {
   #portfolio {
     height: 1750px
   }
+
+  #message {
+    width: 150px;
+    height: 30px;
+  }
+
+  #email-fields {
+    height: 700px;
+   }
 }
 
 @media (max-width: 400px) {
@@ -899,11 +1001,34 @@ audio {
   #portfolio {
     height: 2100px
   }
+
+  #message {
+    width: 120px;
+    height: 50px;
+  }
+
+
 }
 
 @media (max-width: 350px) {
   #portfolio {
     height: 2200px
+  }
+
+  #invalid-text {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+
+  #invalid-text::after {
+    content: "Please enter valid a email!";
+    visibility: visible;
+    display: block;
+    position: absolute;
+    height: 200px;
+    padding: 5px;
+    margin: 5px;
   }
 }
 

@@ -99,3 +99,29 @@ function playPauseSLides() {
     playPauseBtn.style.backgroundPositionY = "-0px";
   }
 }
+
+function handleFormReset() {
+  let thankYouMessage = document.getElementById("thankyou");
+  let invalidEmail = document.getElementById("invalid-email");
+  let inputs =  document.getElementsByClassName("form-inputs");
+  let sendBtn = document.getElementById("send-btn");
+
+  sendBtn.disabled = false;
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = null;
+  }
+
+  if (thankYouMessage) {
+    thankYouMessage.style.display = "none";
+    sendBtn.disabled = false;
+    sendBtn.style.backgroundColor = "white"
+  }
+
+  if (invalidEmail) {
+    invalidEmail.style.display = "none";
+    sendBtn.disabled = false;
+    sendBtn.style.backgroundColor = "white"
+  }
+  return;
+}
