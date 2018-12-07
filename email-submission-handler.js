@@ -10,8 +10,6 @@
       console.log("Spamming alert! Your Email was not sent!");
       alert("Please stop trying to spam me!")
       return true;
-    } else {
-      console.log("Email Sent!");
     }
   }
 
@@ -83,7 +81,8 @@
       xhr.open('POST', url);
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function () {
-        console.log(xhr.status, 'OK',xhr.statusText);
+        console.log(xhr.status, 'OK', xhr.statusText);
+        console.log("Email Sent Sucessfully")
         var formElements = form.querySelector(".form-elements")
         if (formElements) {
           formElements.style.display = "none"; // hide form

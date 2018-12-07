@@ -790,6 +790,21 @@ audio {
   width: 100vw;
   height: 4em;
   background-color: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-note {
+  color: #cccccc;
+}
+
+.footer-nav {
+  color: #cccccc;
+}
+
+.footer-nav:hover {
+  color: blue;
 }
 
 @media (max-width: 1350px) {
@@ -1022,9 +1037,10 @@ audio {
     height: 1950px
   }
 
-      margin: -80px;
-    padding-left: 30px;
+  .footer {
     font-size: 12px;
+  }
+
 }
 
 @media (max-width: 375px) {
@@ -1070,7 +1086,7 @@ audio {
     font-size: 15px;
     padding: 1px;
   }
-  
+
   #portfolio {
     height: 2300px
   }
