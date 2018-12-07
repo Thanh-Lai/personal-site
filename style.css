@@ -75,6 +75,22 @@ section h3:after {
   margin-left: -30px;
 }
 
+.email-btn {
+  background-color: #a8f1fe;
+}
+
+.send-btn {
+  background-color: #a8f1fe;
+}
+
+.email-btn:hover {
+  background-color: #f39c12;
+}
+
+.send-btn:hover {
+  background-color: #f39c12;
+}
+
 /* Header defaults */
 header {
   display: flex;
@@ -764,22 +780,6 @@ audio {
     text-decoration: none;
 }
 
-.email-btn {
-  background-color: #a8f1fe;
-}
-
-.send-btn {
-  background-color: #a8f1fe;
-}
-
-.email-btn:hover {
-  background-color: #f39c12;
-}
-
-.send-btn:hover {
-  background-color: #f39c12;
-}
-
 #honeypot {
   display: none; /* makes the field not visible to humans */
 }
@@ -1028,6 +1028,10 @@ audio {
 }
 
 @media (max-width: 375px) {
+  .nav-item a {
+    padding: 1px;
+  }
+
   #portfolio {
     height: 2000px
   }
@@ -1062,6 +1066,11 @@ audio {
 }
 
 @media (max-width: 350px) {
+  .nav-item a {
+    font-size: 15px;
+    padding: 1px;
+  }
+  
   #portfolio {
     height: 2300px
   }
@@ -1083,6 +1092,11 @@ audio {
 }
 
 @media (max-width: 330px) {
+  .nav-item a {
+    font-size: 15px;
+    padding: 1px;
+  }
+
   #portfolio {
     height: 2650px
   }

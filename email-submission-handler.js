@@ -83,8 +83,7 @@
       xhr.open('POST', url);
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function () {
-        console.log(xhr.status, xhr.statusText);
-        console.log(xhr.responseText);
+        console.log(xhr.status, 'OK',xhr.statusText);
         var formElements = form.querySelector(".form-elements")
         if (formElements) {
           formElements.style.display = "none"; // hide form
