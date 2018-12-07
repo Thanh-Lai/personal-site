@@ -59,8 +59,8 @@
 
   function handleFormSubmit(event) {  // handles form submit without any jquery
     event.preventDefault();           // we are submitting via xhr below
-    var form = event.target;
-    var data = getFormData(form);         // get the values submitted in the form
+    let form = event.target;
+    let data = getFormData(form);         // get the values submitted in the form
 
     if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
       return false;
