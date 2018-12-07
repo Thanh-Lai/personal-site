@@ -75,22 +75,6 @@ section h3:after {
   margin-left: -30px;
 }
 
-.email-btn {
-  background-color: #a8f1fe;
-}
-
-.send-btn {
-  background-color: #a8f1fe;
-}
-
-.email-btn:hover {
-  background-color: #f39c12;
-}
-
-.send-btn:hover {
-  background-color: #f39c12;
-}
-
 /* Header defaults */
 header {
   display: flex;
@@ -783,6 +767,22 @@ audio {
 #honeypot {
   display: none; /* makes the field not visible to humans */
 }
+
+.email-btn {
+  background-color: #a8f1fe;
+}
+
+.send-btn {
+  background-color: #a8f1fe;
+}
+
+/* .email-btn:hover {
+  background-color: #f39c12;
+}
+
+.send-btn:hover {
+  background-color: #f39c12;
+} */
 
 .footer {
   width: 100vw;

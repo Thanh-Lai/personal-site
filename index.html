@@ -228,8 +228,12 @@
                                         <label for="message">Message:</label><br />
                                         <textarea class="form-inputs" id="message" name="message" rows="10" cols="50"
                                             required placeholder="Your message is required"></textarea><br><br>
-                                        <button type="reset" class="email-btn" onclick="handleFormReset()">Reset</button>
-                                        <button type="submit" class="email-btn" id="send-btn">Send</button>
+                                        <button type="reset" class="email-btn" onclick="handleFormReset()" 
+                                        onmouseover="this.style.backgroundColor='#f39c12';" onmouseout="this.style.backgroundColor='#a8f1fe';"
+                                        >Reset</button>
+                                        <button type="submit" class="email-btn" id="send-btn" 
+                                        onmouseover="this.style.backgroundColor='#f39c12';" onmouseout="this.style.backgroundColor='#a8f1fe';"
+                                        >Send</button>
                                         <br /><br />
                                         <div class="thankyou_message" id="thankyou" style="display:none;">
                                             Your email has been sent!

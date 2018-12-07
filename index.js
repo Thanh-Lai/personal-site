@@ -115,13 +115,13 @@ function handleFormReset() {
   if (thankYouMessage) {
     thankYouMessage.style.display = "none";
     sendBtn.disabled = false;
-    sendBtn.style.backgroundColor = "white"
+    sendBtn.style.backgroundColor = "#a8f1fe";
   }
 
   if (invalidEmail) {
     invalidEmail.style.display = "none";
     sendBtn.disabled = false;
-    sendBtn.style.backgroundColor = "white"
+    sendBtn.style.backgroundColor = "#a8f1fe";
   }
   return;
 }
