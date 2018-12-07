@@ -764,7 +764,19 @@ audio {
     text-decoration: none;
 }
 
+.email-btn {
+  background-color: #a8f1fe;
+}
+
+.send-btn {
+  background-color: #a8f1fe;
+}
+
 .email-btn:hover {
+  background-color: #f39c12;
+}
+
+.send-btn:hover {
   background-color: #f39c12;
 }
 
@@ -959,8 +971,26 @@ audio {
   }
 
   #email-fields {
-    height: 700px;
+    height: 600px;
    }
+
+   #invalid-text {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+
+  #invalid-text::after {
+    content: "Please enter valid a email!";
+    visibility: visible;
+    display: block;
+    position: absolute;
+    height: 200px;
+    padding: 5px;
+    margin: -80px;
+    padding-left: 30px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -989,6 +1019,10 @@ audio {
   #portfolio {
     height: 1850px
   }
+
+      margin: -80px;
+    padding-left: 30px;
+    font-size: 12px;
 }
 
 @media (max-width: 375px) {
@@ -1005,6 +1039,21 @@ audio {
   #message {
     width: 120px;
     height: 50px;
+  }
+
+  #invalid-text {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+
+  #invalid-text::after {
+    content: "Please enter valid a email!";
+    visibility: visible;
+    display: block;
+    position: absolute;
+    height: 200px;
+    margin: -45px;
   }
 
 
@@ -1027,13 +1076,49 @@ audio {
     display: block;
     position: absolute;
     height: 200px;
-    padding: 5px;
-    margin: 5px;
+    margin: -45px;
   }
 }
 
 @media (max-width: 330px) {
   #portfolio {
     height: 2650px
+  }
+
+  #email-fields {
+    height: 500px;
+   }
+
+  #invalid-text {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+
+  #invalid-text::after {
+    content: "Please enter valid a email!";
+    visibility: visible;
+    display: block;
+    position: absolute;
+    height: 200px;
+    margin: -80px;
+    padding-left: 30px;
+    font-size: 12px;
+  }
+
+  #thankyou {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+
+  #thankyou::after {
+    content: "Email Sent!";
+    visibility: visible;
+    display: block;
+    position: absolute;
+    height: 200px;
+    margin: -45px;
+    padding-left: 30px;
   }
 }
