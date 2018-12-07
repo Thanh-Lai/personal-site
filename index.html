@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,9 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script async src="https://static.addtoany.com/menu/page.js"></script>
-
     </link>
-    <script src="index.js" defer></script>
+    <script type="application/javascript" src="index.js" defer></script>
+    <script data-cfasync="false" type="text/javascript" src="email-submission-handler.js"></script>
 </head>
 
 <body>
@@ -32,11 +33,11 @@
     <div class="logo-container">
         <img id="logo" src="images/logo.png" />
 
-        <!-- <audio controls autoplay loop volume="0.5">
+        <audio controls autoplay loop volume="0.5">
             <iframe src="audio/silence.mp3" allow="autoplay"></iframe>
             <source src="audio/tranquil.mp3" type="audio/ogg">
             <source src="audio/tranquil.mp3" type="audio/mpeg">
-        </audio> -->
+        </audio>
     </div>
 
     <section class="gallary-container">
@@ -203,25 +204,46 @@
         </div>
         <div class="contact-info">
             <div class="popup-container">
-                <a class="button" href="#popup">Email me</a>
-                <div class="popup" id="popup">
+                <a class="button" href="#email-me">Email me</a>
+                <div class="popup" id="email-me">
                     <div class="popup-inner">
                         <div class="popup__text">
-                            <h1>Lets get coffee or bubble tea!</h1>
-                            <form >
-                                <label for="name">Name:</label> <br/>
-                                <input type="text" id="name" name="name" required><br/><br/>
-                                <label for="email">Email:</label><br/>
-                                <input type="text" id="email" name="email" required><br><br/>
-                                <label for="subject">Subject:</label><br/>
-                                <input type="text" id="subject" name="subject" ><br><br/>
-                                <label for="message">Message:</label><br/>
-                                <textarea id="message" name="message" rows="10" cols="50" required></textarea><br><br>
-                                <input type="reset" value="Reset">
-                                <input type="submit" value="Send">
+                            <form class="gform" id="email-form" method="POST" data-email="tlai1122@gmail.com" action="https://script.google.com/macros/s/AKfycbxlEmYTxlc-3TMP9Hl7xREa_5jljOy7AZMhCFrH/exec">
+                                <div class="form">
+                                    <h1 id="email-me-text">Lets get coffee or bubble tea!</h1>
+                                    <!--prevents email spamming-->
+                                    <div id="email-fields">
+                                        <label class="sr-only"></label>
+                                        <input id="honeypot" type="text" name="honeypot" value="" />
+                                        <!-- -->
+                                        <label for="name">Name:</label> <br />
+                                        <input class="form-inputs" type="text" id="name" name="name" required
+                                            placeholder="Your name is required"><br /><br />
+                                        <label for="email">Email:</label><br />
+                                        <input class="form-inputs" type="email" id="email" name="email" required
+                                            placeholder="Your email is required"><br><br />
+                                        <label for="subject">Subject:</label><br />
+                                        <input class="form-inputs" type="text" id="subject" name="subject"><br><br />
+                                        <label for="message">Message:</label><br />
+                                        <textarea class="form-inputs" id="message" name="message" rows="10" cols="50"
+                                            required placeholder="Your message is required"></textarea><br><br>
+                                        <button type="reset" class="email-btn" onclick="handleFormReset()">Reset</button>
+                                        <button type="submit" class="email-btn" id="send-btn">Send</button>
+                                        <br /><br />
+                                        <div class="thankyou_message" id="thankyou" style="display:none;">
+                                                Your email has been sent!
+                                            </div>
+                                            <div class="email-invalid" id="invalid-email" style="display:none;">
+                                                <p id ="invalid-text">Please enter valid a email! E.g. "email@email.com"</p>
+                                            </div>
+                                    </div>
+                              
+                                </div>
+
                             </form>
+
                         </div>
-                        <a class="popup__close" href="#contact">X</a>
+                        <a class="popup__close" href="#contact" type="reset" onclick="handleFormReset()">X</a>
                     </div>
                 </div>
             </div>
@@ -238,6 +260,7 @@
     <footer class="footer">
     </footer>
     </div>
+    </script>
 </body>
 
 </html>

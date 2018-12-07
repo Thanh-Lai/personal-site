@@ -1,5 +1,4 @@
-import {$} from 'jquery';
-import alertify from "alertify";
+
 let prevScrollpos = window.pageYOffset;
 
 window.onscroll = function() {
@@ -101,25 +100,28 @@ function playPauseSLides() {
   }
 }
 
-$(document).ready(function() {
-  $('#contact-form').submit(function(e) {
-    var name    = document.getElementById('inputName')
-    var email   = document.getElementById('inputEmail')
-    var message = document.getElementById('inputMessage')
+function handleFormReset() {
+  let thankYouMessage = document.getElementById("thankyou");
+  let invalidEmail = document.getElementById("invalid-email");
+  let inputs =  document.getElementsByClassName("form-inputs");
+  let sendBtn = document.getElementById("send-btn");
 
-    if (!name.value || !email.value || !message.value) {
-      alertify.error("Please check your entries");
-      return false;
-    } else {
-      $.ajax({
-        method: 'POST',
-        url: '//formspree.io/tlai1122@gmail.com',
-        data: $('#contact-form').serialize(),
-        datatype: 'json'
-      });
-      e.preventDefault();
-      $(this).get(0).reset();
-      alertify.success("Message sent");
-    }
-  });
-});
+  sendBtn.disabled = false;
+
+  for (let i = 0; i < inputs.length; i++) {
+    inputs[i].value = null;
+  }
+
+  if (thankYouMessage) {
+    thankYouMessage.style.display = "none";
+    sendBtn.disabled = false;
+    sendBtn.style.backgroundColor = "white"
+  }
+
+  if (invalidEmail) {
+    invalidEmail.style.display = "none";
+    sendBtn.disabled = false;
+    sendBtn.style.backgroundColor = "white"
+  }
+  return;
+}
