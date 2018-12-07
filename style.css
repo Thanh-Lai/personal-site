@@ -797,18 +797,20 @@ audio {
 }
 
 @media (max-width: 1000px) {
-
+  #portfolio {
+    height: 1650px
+  }
 }
 
 @media (max-width: 900px) {
   #portfolio {
-    height: 1700px
+    height: 1750px
   }
 }
 
 @media (max-width: 800px) {
   #portfolio {
-    height: 1850px
+    height: 1950px
   }
 
   .popup .popup__text h1 {
@@ -837,7 +839,7 @@ audio {
     margin-left: 9em;
   }
   #portfolio {
-    height: 2050px
+    height: 2150px
   }
 
   .popup .popup__text h1 {
@@ -859,7 +861,7 @@ audio {
 
 @media (max-width: 650px) {
   #portfolio {
-    height: 2200px
+    height: 2350px
   }
 }
 
@@ -937,7 +939,7 @@ audio {
   }
 
   #portfolio {
-    height: 1600px
+    height: 1650px
   }
 
   #message {
@@ -962,7 +964,7 @@ audio {
 
 @media (max-width: 450px) {
   #portfolio {
-    height: 1750px
+    height: 1850px
   }
 
   #message {
@@ -1017,7 +1019,7 @@ audio {
   }
 
   #portfolio {
-    height: 1850px
+    height: 1950px
   }
 
       margin: -80px;
@@ -1033,7 +1035,7 @@ audio {
 
 @media (max-width: 360px) {
   #portfolio {
-    height: 2100px
+    height: 2150px
   }
 
   #message {
@@ -1061,7 +1063,7 @@ audio {
 
 @media (max-width: 350px) {
   #portfolio {
-    height: 2200px
+    height: 2300px
   }
 
   #invalid-text {
