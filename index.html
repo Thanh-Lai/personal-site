@@ -14,12 +14,13 @@
     <script data-cfasync="false" type="text/javascript" src="JavaScript/email-submission-handler.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <!-- uncomment ScrollMagic Indicators for developement-->
     <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script> -->
     <script type="text/javascript" src="JavaScript/scroll-animations.js" defer></script>
 </head>
 
 <body>
-
+    <!-- Navbar Section -->
     <header id="header">
         <nav id="navbar">
             <div class="nav-item">
@@ -33,20 +34,20 @@
             </div>
         </nav>
     </header>
-
-    <div class="logo-container">
+    <!--Logo Section-->
+    <section class="logo-container">
         <img id="logo" src="images/logo.png" />
 
         <audio controls autoplay loop volume="0.5">
+            <!-- silence.mp3 for autoplay -->
             <iframe src="audio/silence.mp3" allow="autoplay"></iframe>
             <source src="audio/tranquil.mp3" type="audio/ogg">
             <source src="audio/tranquil.mp3" type="audio/mpeg">
         </audio>
-    </div>
-
+    </section>
+    <!--Image Carousel Section-->
     <section class="gallary-container">
         <h3 id="gallary-name">Me Around the World</h3>
-
         <div class="slide-show-container">
             <div id="play-pause-btn" onclick="playPauseSLides()"></div>
             <div class="left-arrow" onclick="plusSLides(-1)">
@@ -81,7 +82,7 @@
         </div>
         <div id="dots-container"></div>
     </section>
-
+    <!--About Section -->
     <section id="about">
         <h2 class="sections">About Me</h2>
         <div class="flex">
@@ -103,7 +104,7 @@
             </p>
         </div>
     </section>
-
+    <!-- Portfolio Section -->
     <section id="portfolio">
         <h2 class="sections">My Portfolio</h2>
         <div class="download" id="download-text">
@@ -114,7 +115,7 @@
                 <img id="resume-btn" src="images/download.png">
             </a>
         </div>
-
+        <!-- Project timeline -->
         <div class="timeline">
             <div class="container right text-up">
                 <div class="content">
@@ -125,7 +126,6 @@
                         Developer:
                         <span>
                             <a href="https://github.com/keep-it-up/keep-it-up" target="_blank">GitHub</a>
-                            <a></a>
                         </span>
                         <ul>
                             <li>Developing a platform for users to keep track of their goals.</li>
@@ -194,7 +194,7 @@
             </div>
         </div>
     </section>
-
+    <!-- Contacts Section -->
     <section id="contact">
         <h2 class="sections">Contact Me</h2>
 
@@ -213,7 +213,7 @@
         <div class="contact-info contact-me">
             <a class="button" href="#email-me">Email me</a>
         </div>
-
+        <!-- Pop up container -->
         <div class="contact-info">
             <div class="popup-container">
                 <div class="popup" id="email-me">
@@ -247,7 +247,7 @@
                                         <button type="submit" class="email-btn" id="send-btn" onmouseover="this.style.backgroundColor='#f39c12';"
                                             onmouseout="this.style.backgroundColor='#a8f1fe';">Send</button>
                                         <br /><br />
-
+                                        <!-- Thank you and email validation notice-->
                                         <div class="thankyou_message" id="thankyou" style="display:none;">
                                             Your email has been sent!
                                         </div>
@@ -264,6 +264,7 @@
             </div>
         </div>
         <br />
+        <!-- Follow me buttons -->
         <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow contact-info contact-me">
             <a class="a2a_button_twitter" data-a2a-follow="tlaiful"></a>
             <a class="a2a_button_linkedin" data-a2a-follow="thanhlai"></a>
@@ -271,7 +272,7 @@
             <a class="a2a_button_medium" data-a2a-follow="tlai1122"></a>
         </div>
     </section>
-
+    <!-- Footer Section -->
     <footer class="footer">
         <div>
             <a href="#about" class="footer-nav">About</a>

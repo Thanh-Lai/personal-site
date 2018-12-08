@@ -63,7 +63,6 @@ section h2:after {
   margin-left: -30px;
 }
 
-
 section h3:after {
   content: "";
   position: absolute;
@@ -137,6 +136,7 @@ audio {
   width: 30%;
 }
 
+/* Animations for Image Carousel */
 .gallary-container {
   width: 100%;
   height: 70vh;
@@ -150,6 +150,7 @@ audio {
   opacity: 0.6;
 }
 
+/* Move slides left */
 .gallary-container .move-left-current-slide {
   animation-name: move-left-current;
   animation-duration: 0.5s;
@@ -184,6 +185,7 @@ audio {
   }
 }
 
+/* Move slides right */
 .gallary-container .move-right-current-slide {
   animation-name: move-right-current;
   animation-duration: 0.5s;
@@ -218,6 +220,7 @@ audio {
   }
 }
 
+/* Move image-text */
 .slide-text-from-bottom {
   animation-name: slide-text-from-bottom;
   animation-duration: .7s;
@@ -258,6 +261,7 @@ audio {
   padding: 2.5px;
 }
 
+/* Image dots */
 .gallary-container #dots-container {
   width: 100%;
   height: 10%;
@@ -285,7 +289,6 @@ audio {
   margin-left: 0;
 }
 
-
 .gallary-container .slide-show-container {
   width: 100%;
   height: 90%;
@@ -294,6 +297,7 @@ audio {
   position: relative;
 }
 
+/* Play pause btn */
 .gallary-container .slide-show-container #play-pause-btn {
   width: 32px;
   height: 32px;
@@ -326,6 +330,7 @@ audio {
   height: 100%;    
 }
 
+/* Image text caption and number */
 .gallary-container .slide-show-container .image-holder .caption {
   display: none;
 }
@@ -339,6 +344,7 @@ audio {
   top: 0;
 }
 
+/* CSS for right and left arrows */
 .gallary-container .slide-show-container .left-arrow, .gallary-container .slide-show-container .right-arrow {
   width: 50px;
   background: #00000036;
@@ -420,6 +426,7 @@ audio {
   overflow: hidden;
 }
 
+/* ScrollMagic Animation */
 .sections {
   opacity: 0;
   transition: all 5s ease-in;
@@ -429,6 +436,7 @@ audio {
   opacity: 1;
 }
 
+/* About Section CSS */
 #about {
   width: 100%;
   height: 600px;
@@ -451,7 +459,6 @@ audio {
   opacity: 1;
   transform: translateY(0);
 }
-
 
 .flex {
   display: flex;
@@ -476,6 +483,7 @@ audio {
   height: 350px;
 }
 
+/* ScrollMagic Animation */
 .headshot img {
   transition: all 3s ease-out;
   filter: blur(20px) grayscale(20%);
@@ -485,6 +493,7 @@ audio {
   filter: blur(0) grayscale(0);
 }
 
+/* Portforlio CSS */
 #portfolio {
   width: 100%;
   height: 1600px;
@@ -497,6 +506,7 @@ audio {
   opacity: 0.7;
 }
 
+/* ScrollMagic Animation */
 .download {
   opacity: 0;
   transform: scale(0);
@@ -521,7 +531,6 @@ audio {
   justify-content: center;
   height: 30px;
 }
-
 
 #portfolio #download-resume img {
   width: 100px;
@@ -662,6 +671,7 @@ audio {
   }
 }
 
+/* Contacts Section */
 #contact {
   width: 100%;
   height: 570px;
@@ -673,6 +683,7 @@ audio {
   background-color: antiquewhite;
 }
 
+/* ScrollMagic Animation */
 .contact-me {
   transition: all 2s ease-out;
   filter: blur(20px);
@@ -704,6 +715,7 @@ audio {
   height: 30px;
 }
 
+/* Email Popup Animations */
 .popup-container {
   background-color: antiquewhite;
   display: flex;
@@ -754,6 +766,7 @@ audio {
   transition: .64s ease-in-out;
 }
 
+/* Contents inside popup */
 .popup .popup-inner {
     position: relative;
     bottom: -100vw;
@@ -769,6 +782,7 @@ audio {
     transition: .64s ease-in-out;
   }
 
+  /* Popup texts */
 .popup .popup__text {
     display: flex;
     flex-direction: column;
@@ -803,6 +817,7 @@ audio {
     transform: rotate(0);
 }
 
+/* Close popup button */
 .popup .popup__close {
     position: absolute;
     right: -1rem;
@@ -821,7 +836,7 @@ audio {
     text-decoration: none;
 }
 
-/* makes the field not visible to humans */
+/* Spam prevention. Makes the field not visible to humans */
 #honeypot {
   display: none;
 }
@@ -834,6 +849,7 @@ audio {
   background-color: #a8f1fe;
 }
 
+/* Footer Section */
 .footer {
   width: 100vw;
   height: 4em;
@@ -855,10 +871,7 @@ audio {
   color: blue;
 }
 
-@media (max-width: 1350px) {
-
-}
-
+/* Media Queries for responsive design */
 @media (max-width: 1000px) {
   #portfolio {
     height: 1650px
@@ -1111,7 +1124,7 @@ audio {
   }
 
   #portfolio {
-    height: 2000px
+    height: 2050px
   }
 }
 
@@ -1193,8 +1206,8 @@ audio {
     display: block;
     position: absolute;
     height: 200px;
-    margin: -80px;
-    padding-left: 30px;
+    margin: -100px;
+    padding-left: 50px;
     font-size: 12px;
   }
 

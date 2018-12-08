@@ -4,9 +4,9 @@
     return re.test(email);
   }
 
+  //Validates human.
   function validateHuman(honeypot) {
-    if (honeypot) {  //if hidden form filled up
-      // disables send button if honeypot form is filled
+    if (honeypot) {  
       disablebuttons()
       console.log("Spam alert! Your email has not been sent!");
       alert("Please stop trying to spam me!")
@@ -14,7 +14,7 @@
     }
   }
 
-  // get all data in form and return object
+  // Get all data in form and return object
   function getFormData(form) {
     var elements = form.elements;
     var fields = Object.keys(elements).map(function (k) {
@@ -50,21 +50,27 @@
 
     // add form-specific values into the data
     formData.formDataNameOrder = JSON.stringify(fields);
-    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
-    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+    // default sheet name
+    formData.formGoogleSheetName = form.dataset.sheet || "responses";
+    // no email by default
+    formData.formGoogleSendEmail = form.dataset.email || "";
 
     return formData;
   }
 
-  function handleFormSubmit(event) {  // handles form submit without any jquery
-    event.preventDefault();           // we are submitting via xhr below
+  // handles form submit
+  function handleFormSubmit(event) {
+    event.preventDefault();
     let form = event.target;
-    let data = getFormData(form);         // get the values submitted in the form
+    // get the values submitted in the form
+    let data = getFormData(form);
 
-    if (validateHuman(data.honeypot)) {  //if form is filled, form will not be submitted
+    //if form is filled, form will not be submitted
+    if (validateHuman(data.honeypot)) {
       return false;
     }
-    if (data.email && !validEmail(data.email)) {   // if email is not valid show error
+    // if email is not valid show error
+    if (data.email && !validEmail(data.email)) {
       var invalidEmail = form.querySelector(".email-invalid");
       if (invalidEmail) {
         console.log("Invalid-Email")
@@ -76,6 +82,7 @@
       if (invalidEmail) {
         invalidEmail.style.display = "none";
       }
+      // If email is valid, sends form vs XMLHttpRequest
       disablebuttons();
       var url = form.action;
       var xhr = new XMLHttpRequest();
