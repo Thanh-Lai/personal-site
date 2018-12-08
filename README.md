@@ -25,5 +25,5 @@ Visit me at: http://www.thanh-lai.com/
 
 - website: http://www.thanh-lai.com/
 - twitter: https://twitter.com/tlaiful
-- github: https://github.com/Thanh-Lai
+-[GitHub](https://github.com/Thanh-Lai)
 - linkedin: https://www.linkedin.com/in/thanhlai/
