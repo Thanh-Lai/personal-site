@@ -139,7 +139,7 @@ audio {
 
 .gallary-container {
   width: 100%;
-  height: 600px;
+  height: 70vh;
   max-width: 1000px;
   user-select: none;
   box-shadow: 0px 0px 3px 1px #00000078;
@@ -420,6 +420,15 @@ audio {
   overflow: hidden;
 }
 
+.sections {
+  opacity: 0;
+  transition: all 5s ease-in;
+}
+
+.sections.appear {
+  opacity: 1;
+}
+
 #about {
   width: 100%;
   height: 600px;
@@ -430,6 +439,17 @@ audio {
   margin: 0px auto 0px auto;
   background-color: white;
   opacity: 0.7;
+}
+
+.text-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 5s ease-out;
+}
+
+.text-up.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -454,7 +474,15 @@ audio {
   border-radius: 50%;
   width: 95%;
   height: 350px;
-  
+}
+
+.headshot img {
+  transition: all 3s ease-out;
+  filter: blur(20px) grayscale(20%);
+}
+
+.headshot img.unblurr {
+  filter: blur(0) grayscale(0);
 }
 
 #portfolio {
@@ -467,6 +495,17 @@ audio {
   margin: 0px auto 0px auto;
   background-color: white;
   opacity: 0.7;
+}
+
+.download {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 5s ease;
+}
+
+.download.scale {
+  opacity: 1;
+  transform: scale(1);
 }
 
 #portfolio #download-resume {
@@ -634,6 +673,24 @@ audio {
   background-color: antiquewhite;
 }
 
+.contact-me {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.contact-me.unblurr {
+  filter: blur(0);
+}
+
+.contact-form {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.contact-form.unblurr {
+  filter: blur(0);
+}
+
 #contact .contact-info {
   display: flex;
   align-items: center;
@@ -764,6 +821,11 @@ audio {
     text-decoration: none;
 }
 
+/* makes the field not visible to humans */
+#honeypot {
+  display: none;
+}
+
 .email-btn {
   background-color: #a8f1fe;
 }
@@ -772,24 +834,25 @@ audio {
   background-color: #a8f1fe;
 }
 
-.email-btn:hover {
-  background-color: #f39c12;
-}
-
-.send-btn:hover {
-  background-color: #f39c12;
-}
-
-#honeypot {
-  display: none; /* makes the field not visible to humans */
-}
-
-
-
 .footer {
   width: 100vw;
   height: 4em;
   background-color: #252525;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-note {
+  color: #cccccc;
+}
+
+.footer-nav {
+  color: #cccccc;
+}
+
+.footer-nav:hover {
+  color: blue;
 }
 
 @media (max-width: 1350px) {
@@ -920,9 +983,22 @@ audio {
   }
 
   #invalid-text {
+    visibility: hidden;
+    display: block;
+    position: absolute;
+  }
+
+  #invalid-text::after {
+    content: "Please enter valid a email!";
+    visibility: visible;
+    display: block;
+    position: absolute;
     height: 200px;
     padding: 5px;
-    margin: 5px;
+    margin: -80px;
+    padding-left: 50px;
+    padding-top: 25px;
+    font-size: 12px;
   }
 
 }
@@ -990,7 +1066,8 @@ audio {
     height: 200px;
     padding: 5px;
     margin: -80px;
-    padding-left: 30px;
+    padding-left: 35px;
+    padding-top: 25px;
     font-size: 12px;
   }
 }
@@ -1022,12 +1099,17 @@ audio {
     height: 1950px
   }
 
-      margin: -80px;
-    padding-left: 30px;
+  .footer {
     font-size: 12px;
+  }
+
 }
 
 @media (max-width: 375px) {
+  .nav-item a {
+    padding: 1px;
+  }
+
   #portfolio {
     height: 2000px
   }
@@ -1057,11 +1139,14 @@ audio {
     height: 200px;
     margin: -45px;
   }
-
-
 }
 
 @media (max-width: 350px) {
+  .nav-item a {
+    font-size: 15px;
+    padding: 1px;
+  }
+
   #portfolio {
     height: 2300px
   }
@@ -1083,6 +1168,11 @@ audio {
 }
 
 @media (max-width: 330px) {
+  .nav-item a {
+    font-size: 15px;
+    padding: 1px;
+  }
+
   #portfolio {
     height: 2650px
   }

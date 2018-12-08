@@ -10,8 +10,12 @@
     <link rel="stylesheet" href="style.css">
     <script async src="https://static.addtoany.com/menu/page.js"></script>
     </link>
-    <script type="application/javascript" src="index.js" defer></script>
-    <script data-cfasync="false" type="text/javascript" src="email-submission-handler.js"></script>
+    <script type="text/javascript" src="JavaScript/index.js" defer></script>
+    <script data-cfasync="false" type="text/javascript" src="JavaScript/email-submission-handler.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script> -->
+    <script type="text/javascript" src="JavaScript/scroll-animations.js" defer></script>
 </head>
 
 <body>
@@ -79,16 +83,16 @@
     </section>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2 class="sections">About Me</h2>
         <div class="flex">
-            <div id="headshot">
+            <div class="headshot" id="headshot">
                 <img src="images/profile-pic.png">
             </div>
-            <p id="about-me">
+            <p class="text-up" id="about-me">
                 <strong>Hi, my name is Thanh!</strong> I am a Software Engineer in New York City. My most enduring
                 trait is my curiosity
                 and that shows in my willingness to learn. My hobbies include watching my beloved Manchester United,
-                tranquil hikes, and long directionless strolls. Besides computer science, I like to seek out long
+                taking tranquil hikes, and long directionless strolls. Besides computer science, I like to seek out long
                 meaningful conversations
                 in a range of topics include animals, history, science, politics, and geopolitics. I drink way too much
                 bubble tea and I
@@ -101,18 +105,18 @@
     </section>
 
     <section id="portfolio">
-        <h2>My Portfolio</h2>
-        <div id="download-text">
+        <h2 class="sections">My Portfolio</h2>
+        <div class="download" id="download-text">
             <strong>Download my Resume!</strong>
         </div>
-        <div id="download-resume">
+        <div class="download" id="download-resume">
             <a href="resume/Thanh-Lai-Resume.pdf" download target="_blank">
                 <img id="resume-btn" src="images/download.png">
             </a>
         </div>
 
         <div class="timeline">
-            <div class="container right">
+            <div class="container right text-up">
                 <div class="content">
                     <h3 class="portfolio-title">December 2018: "Keep It Up"</h3 class="portfolio-title">
                     <p>
@@ -132,7 +136,7 @@
                     </p>
                 </div>
             </div>
-            <div class="container left">
+            <div class="container left text-up">
                 <div class="content">
                     <h3 class="portfolio-title">November 2018: Personal Site</h3 class="portfolio-title">
                     <p>
@@ -143,13 +147,13 @@
                         </span>
                         <ul>
                             <li>Developed a personal portfolio website.</li>
-                            <li>Built with HTML, CSS, JavaScript, Gmail API, ScrollMagic.</li>
+                            <li>Built with HTML, CSS, JavaScript, Gmail API, ScrollMagic, jQuery.</li>
                             <li>Highly responsive design, animated, and users can send email.</li>
                         </ul>
                     </p>
                 </div>
             </div>
-            <div class="container right">
+            <div class="container right text-up">
                 <div class="content">
                     <h3 class="portfolio-title">July 2018: "Code O"</h3 class="portfolio-title">
                     <p>
@@ -171,7 +175,7 @@
                     </p>
                 </div>
             </div>
-            <div class="container left">
+            <div class="container left text-up">
                 <div class="content">
                     <h3 class="portfolio-title">June 2018: "Leggo my Lego"</h3 class="portfolio-title">
                     <p>
@@ -192,20 +196,26 @@
     </section>
 
     <section id="contact">
-        <h2 class="contact-info">Contact Me</h2>
-        <div class="contact-info">
+        <h2 class="sections">Contact Me</h2>
+
+        <div class="contact-info contact-me">
             <p class="contact-field">Email: </p>
             &nbsp
             <p> tlai1122@gmail.com</p>
         </div>
-        <div class="contact-info">
+
+        <div class="contact-info contact-me">
             <p class="contact-field">Phone Number: </p>
             &nbsp
             <p> (201) 993-8834</p>
         </div>
+
+        <div class="contact-info contact-me">
+            <a class="button" href="#email-me">Email me</a>
+        </div>
+
         <div class="contact-info">
             <div class="popup-container">
-                <a class="button" href="#email-me">Email me</a>
                 <div class="popup" id="email-me">
                     <div class="popup-inner">
                         <div class="popup__text">
@@ -220,29 +230,33 @@
                                         <label for="name">Name:</label> <br />
                                         <input class="form-inputs" type="text" id="name" name="name" required
                                             placeholder="Your name is required"><br /><br />
+
                                         <label for="email">Email:</label><br />
                                         <input class="form-inputs" type="email" id="email" name="email" required
                                             placeholder="Your email is required"><br><br />
+
                                         <label for="subject">Subject:</label><br />
                                         <input class="form-inputs" type="text" id="subject" name="subject"><br><br />
+
                                         <label for="message">Message:</label><br />
                                         <textarea class="form-inputs" id="message" name="message" rows="10" cols="50"
                                             required placeholder="Your message is required"></textarea><br><br>
-                                        <button type="reset" class="email-btn" onclick="handleFormReset()">Reset</button>
-                                        <button type="submit" class="email-btn" id="send-btn">Send</button>
+
+                                        <button type="reset" class="email-btn" onclick="handleFormReset()" onmouseover="this.style.backgroundColor='#f39c12';"
+                                            onmouseout="this.style.backgroundColor='#a8f1fe';">Reset</button>
+                                        <button type="submit" class="email-btn" id="send-btn" onmouseover="this.style.backgroundColor='#f39c12';"
+                                            onmouseout="this.style.backgroundColor='#a8f1fe';">Send</button>
                                         <br /><br />
+
                                         <div class="thankyou_message" id="thankyou" style="display:none;">
-                                                Your email has been sent!
-                                            </div>
-                                            <div class="email-invalid" id="invalid-email" style="display:none;">
-                                                <p id ="invalid-text">Please enter valid a email! E.g. "email@email.com"</p>
-                                            </div>
+                                            Your email has been sent!
+                                        </div>
+                                        <div class="email-invalid" id="invalid-email" style="display:none;">
+                                            <p id="invalid-text">Please enter valid a email! E.g. "email@email.com"</p>
+                                        </div>
                                     </div>
-                              
                                 </div>
-
                             </form>
-
                         </div>
                         <a class="popup__close" href="#contact" type="reset" onclick="handleFormReset()">X</a>
                     </div>
@@ -250,7 +264,7 @@
             </div>
         </div>
         <br />
-        <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow contact-info">
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style a2a_follow contact-info contact-me">
             <a class="a2a_button_twitter" data-a2a-follow="tlaiful"></a>
             <a class="a2a_button_linkedin" data-a2a-follow="thanhlai"></a>
             <a class="a2a_button_github" data-a2a-follow="Thanh-Lai"></a>
@@ -259,6 +273,15 @@
     </section>
 
     <footer class="footer">
+        <div>
+            <a href="#about" class="footer-nav">About</a>
+            <a href="#portfolio" class="footer-nav">Portfolio</a>
+            <a href="#contact" class="footer-nav">Contact</a>
+        </div>
+        &nbsp &nbsp &nbsp
+        <div id="footer-note">
+            <h5>Made by Thanh for Thanh</h5>
+        </div>
     </footer>
     </div>
     </script>
