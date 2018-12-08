@@ -20,3 +20,10 @@ Visit me at: http://www.thanh-lai.com/
 
 <img align="center" width="500" height="350"
      title="demo" src="./images/demo.gif">
+
+## Contact Me
+
+website: http://www.thanh-lai.com/
+twitter: https://twitter.com/tlaiful
+github: https://github.com/Thanh-Lai
+linkedin: https://www.linkedin.com/in/thanhlai/
