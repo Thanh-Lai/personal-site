@@ -14,7 +14,7 @@ $(document).ready(function() {
         .setClassToggle(this, 'fade-in')
         .addTo(controller);
     })
-    
+
     let headshot = new ScrollMagic.Scene({
         triggerElement: '#headshot img',
         duration: '70%',
@@ -44,7 +44,7 @@ $(document).ready(function() {
     })
 
     $('.contact-me').each(function() {
-        let textUp = new ScrollMagic.Scene({
+        let contacts = new ScrollMagic.Scene({
             triggerElement: this,
             duration: '80%',
             triggerHook: 0.9
