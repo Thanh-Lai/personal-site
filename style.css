@@ -1124,7 +1124,7 @@ audio {
   }
 
   #portfolio {
-    height: 2000px
+    height: 2050px
   }
 }
 
@@ -1206,8 +1206,8 @@ audio {
     display: block;
     position: absolute;
     height: 200px;
-    margin: -80px;
-    padding-left: 30px;
+    margin: -100px;
+    padding-left: 50px;
     font-size: 12px;
   }
 
