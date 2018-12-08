@@ -23,7 +23,7 @@ Visit me at: http://www.thanh-lai.com/
 
 ## Contact Me
 
-- website: http://www.thanh-lai.com/
-- twitter: https://twitter.com/tlaiful
--[GitHub](https://github.com/Thanh-Lai)
-- linkedin: https://www.linkedin.com/in/thanhlai/
+- [Website](http://www.thanh-lai.com/){:target="_blank"}
+- [GitHub](https://github.com/Thanh-Lai){:target="_blank"}
+- [Twitter](https://twitter.com/tlaiful){:target="_blank"}
+- [Linkedin](https://www.linkedin.com/in/thanhlai/){:target="_blank"}
