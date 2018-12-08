@@ -9,6 +9,7 @@ $(document).ready(function() {
             triggerElement: this,
             duration: '80%',
             triggerHook: 0.9,
+            // reverse: false
         })
         .setClassToggle(this, 'fade-in')
         .addTo(controller);
@@ -32,21 +33,15 @@ $(document).ready(function() {
         .addTo(controller)
     })
 
-    let downloadText = new ScrollMagic.Scene({
-        triggerElement: '#download-text',
-        duration: '80%',
-        triggerHook: 0.9,
+    $('.download').each(function() {
+        let download = new ScrollMagic.Scene({
+            triggerElement: this,
+            duration: '80%',
+            triggerHook: 0.9
+        })
+        .setClassToggle(this, 'scale')
+        .addTo(controller);
     })
-    .setClassToggle('#download-text', 'scale')
-    .addTo(controller)
-
-    let downloadResume = new ScrollMagic.Scene({
-        triggerElement: '#download-resume',
-        duration: '80%',
-        triggerHook: 0.9,
-    })
-    .setClassToggle('#download-resume', 'scale')
-    .addTo(controller)
 
     $('.contact-me').each(function() {
         let textUp = new ScrollMagic.Scene({

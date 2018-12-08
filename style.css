@@ -422,7 +422,7 @@ audio {
 
 .sections {
   opacity: 0;
-  transition: all 3s ease-in;
+  transition: all 5s ease-in;
 }
 
 .sections.appear {
@@ -444,7 +444,7 @@ audio {
 .text-up {
   opacity: 0;
   transform: translateY(100px);
-  transition: all 1s ease-out;
+  transition: all 5s ease-out;
 }
 
 .text-up.fade-in {
@@ -477,7 +477,7 @@ audio {
 }
 
 .headshot img {
-  transition: all 2s ease-out;
+  transition: all 3s ease-out;
   filter: blur(20px) grayscale(20%);
 }
 
@@ -497,24 +497,13 @@ audio {
   opacity: 0.7;
 }
 
-.download-text {
+.download {
   opacity: 0;
   transform: scale(0);
-  transition: all 3s ease;
+  transition: all 5s ease;
 }
 
-.download-resume {
-  opacity: 0;
-  transform: scale(0);
-  transition: all 3s ease;
-}
-
-.download-text.scale {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.download-resume.scale {
+.download.scale {
   opacity: 1;
   transform: scale(1);
 }
