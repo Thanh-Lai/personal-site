@@ -1,7 +1,7 @@
 
 let prevScrollpos = window.pageYOffset;
 
-window.onscroll = function() {
+window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {
     document.getElementById("navbar").style.top = "0";
@@ -11,8 +11,8 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-navbar.onmouseover = function() {
-    document.getElementById("navbar").style.top = "0";
+navbar.onmouseover = function () {
+  document.getElementById("navbar").style.top = "0";
 }
 
 let slideIndex, slides, dots, dotsContainer, captionText;
@@ -27,9 +27,9 @@ function initGallery() {
   dotsContainer = document.getElementById("dots-container");
 
   for (let i = 0; i < slides.length; i++) {
-    let dot =  document.createElement("span");
+    let dot = document.createElement("span");
     dot.classList.add("dots");
-    dot.setAttribute("onClick", "moveSlide("+i+")")
+    dot.setAttribute("onClick", "moveSlide(" + i + ")")
     dotsContainer.append(dot);
     dots.push(dot)
   }
@@ -79,7 +79,7 @@ function moveSlide(n) {
   captionText.style.display = "block";
 }
 
-let timer =  null;
+let timer = null;
 
 function setTimer() {
   timer = setInterval(() => plusSLides(1), 3500)
@@ -103,10 +103,10 @@ function playPauseSLides() {
 function handleFormReset() {
   let thankYouMessage = document.getElementById("thankyou");
   let invalidEmail = document.getElementById("invalid-email");
-  let inputs =  document.getElementsByClassName("form-inputs");
-  let sendBtn = document.getElementById("send-btn");
+  let inputs = document.getElementsByClassName("form-inputs");
+  let buttons = document.getElementsByClassName("email-btn")
 
-  sendBtn.disabled = false;
+  console.log("Form Reset")
 
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].value = null;
@@ -114,14 +114,20 @@ function handleFormReset() {
 
   if (thankYouMessage) {
     thankYouMessage.style.display = "none";
-    sendBtn.disabled = false;
-    sendBtn.style.backgroundColor = "#a8f1fe";
+
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = false
+      buttons[i].style.backgroundColor = "#a8f1fe"
+    }
   }
 
   if (invalidEmail) {
     invalidEmail.style.display = "none";
-    sendBtn.disabled = false;
-    sendBtn.style.backgroundColor = "#a8f1fe";
+
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = false
+      buttons[i].style.backgroundColor = "#a8f1fe"
+    }
   }
   return;
 }

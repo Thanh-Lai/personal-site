@@ -6,8 +6,9 @@
 
   function validateHuman(honeypot) {
     if (honeypot) {  //if hidden form filled up
-      disableSendButton()
-      console.log("Spamming alert! Your Email was not sent!");
+      // disables send button if honeypot form is filled
+      disablebuttons()
+      console.log("Spam alert! Your email has not been sent!");
       alert("Please stop trying to spam me!")
       return true;
     }
@@ -75,7 +76,7 @@
       if (invalidEmail) {
         invalidEmail.style.display = "none";
       }
-      disableSendButton();
+      disablebuttons();
       var url = form.action;
       var xhr = new XMLHttpRequest();
       xhr.open('POST', url);
@@ -111,11 +112,14 @@
   }
   document.addEventListener("DOMContentLoaded", loaded, false);
 
-  function disableSendButton() {
-    let sendBtn = document.getElementById("send-btn")
-    sendBtn.disabled = true;
-    sendBtn.style.backgroundColor = "red"
-    console.log("Send Button Locked")
+  function disablebuttons() {
+    let buttons = document.getElementsByClassName("email-btn")
+
+    for (let i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true
+      buttons[i].style.backgroundColor = "red"
+    }
+    console.log("Buttons Locked");
   }
 
 })();
