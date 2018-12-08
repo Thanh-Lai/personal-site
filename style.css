@@ -420,6 +420,15 @@ audio {
   overflow: hidden;
 }
 
+.sections {
+  opacity: 0;
+  transition: all 3s ease-in;
+}
+
+.sections.appear {
+  opacity: 1;
+}
+
 #about {
   width: 100%;
   height: 600px;
@@ -430,6 +439,17 @@ audio {
   margin: 0px auto 0px auto;
   background-color: white;
   opacity: 0.7;
+}
+
+.text-up {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
+
+.text-up.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
@@ -454,7 +474,15 @@ audio {
   border-radius: 50%;
   width: 95%;
   height: 350px;
-  
+}
+
+.headshot img {
+  transition: all 2s ease-out;
+  filter: blur(20px) grayscale(20%);
+}
+
+.headshot img.unblurr {
+  filter: blur(0) grayscale(0);
 }
 
 #portfolio {
@@ -467,6 +495,28 @@ audio {
   margin: 0px auto 0px auto;
   background-color: white;
   opacity: 0.7;
+}
+
+.download-text {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 3s ease;
+}
+
+.download-resume {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 3s ease;
+}
+
+.download-text.scale {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.download-resume.scale {
+  opacity: 1;
+  transform: scale(1);
 }
 
 #portfolio #download-resume {
@@ -632,6 +682,24 @@ audio {
   box-sizing: border-box;
   margin: 0px auto 0px auto;
   background-color: antiquewhite;
+}
+
+.contact-me {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.contact-me.unblurr {
+  filter: blur(0);
+}
+
+.contact-form {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.contact-form.unblurr {
+  filter: blur(0);
 }
 
 #contact .contact-info {
