@@ -1,6 +1,7 @@
 
 let prevScrollpos = window.pageYOffset;
 
+// Navbar appear and disapear
 window.onscroll = function () {
   let currentScrollPos = window.pageYOffset;
   if (prevScrollpos > currentScrollPos) {

@@ -2,8 +2,7 @@ $(document).ready(function() {
     //Init ScrollMagic
     let controller = new ScrollMagic.Controller();
 
-    // scenes
-
+    // ScrollMagic scenes
     $('.text-up').each(function() {
         let textUp = new ScrollMagic.Scene({
             triggerElement: this,
