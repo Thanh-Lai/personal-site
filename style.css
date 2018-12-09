@@ -1194,6 +1194,10 @@ audio {
     height: 500px;
    }
 
+  .form-inputs {
+    width: 11em;
+  }
+
   #invalid-text {
     visibility: hidden;
     display: block;
