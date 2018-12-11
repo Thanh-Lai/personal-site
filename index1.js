@@ -1,141 +1,6 @@
-
-let prevScrollpos = window.pageYOffset;
-
-// Navbar appear and disapear
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-
-navbar.onmouseover = function () {
-  document.getElementById("navbar").style.top = "0";
-}
-
-let slideIndex, slides, dots, dotsContainer, captionText;
-
-function initGallery() {
-  slideIndex = 0;
-  slides = document.getElementsByClassName("image-holder");
-  slides[slideIndex].style.opacity = 1;
-  captionText = document.querySelector(".caption-holder .caption-text");
-  captionText.innerText = slides[slideIndex].querySelector(".caption-text").innerText;
-  dots = [];
-  dotsContainer = document.getElementById("dots-container");
-
-  for (let i = 0; i < slides.length; i++) {
-    let dot = document.createElement("span");
-    dot.classList.add("dots");
-    dot.setAttribute("onClick", "moveSlide(" + i + ")")
-    dotsContainer.append(dot);
-    dots.push(dot)
-  }
-  dots[slideIndex].classList.add("active")
-}
-
-initGallery();
-
-function plusSLides(n) {
-  moveSlide(slideIndex + n)
-}
-
-function moveSlide(n) {
-  let moveSLideClass = {
-    forCurrent: "",
-    forNext: ""
-  }
-  let slideTextClass;
-
-  if (n > slideIndex) {
-    if (n >= slides.length) n = 0
-    moveSLideClass.forCurrent = "move-left-current-slide";
-    moveSLideClass.forNext = "move-left-next-slide";
-    slideTextClass = "slide-text-from-top";
-  } else if (n < slideIndex) {
-    if (n < 0) n = slides.length - 1
-    moveSLideClass.forCurrent = "move-right-current-slide";
-    moveSLideClass.forNext = "move-right-next-slide";
-    slideTextClass = "slide-text-from-bottom";
-  }
-  if (n !== slideIndex) {
-    let next = slides[n];
-    let current = slides[slideIndex];
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].className = "image-holder";
-      slides[i].style.opacity = 0;
-      dots[i].classList.remove("active");
-    }
-    current.classList.add(moveSLideClass.forCurrent);
-    next.classList.add(moveSLideClass.forNext);
-    dots[n].classList.add("active");
-    slideIndex = n;
-  }
-  captionText.style.display = "none";
-  captionText.className = `caption-text ${slideTextClass}`;
-  captionText.innerText = slides[n].querySelector(".caption-text").innerText;
-  captionText.style.display = "block";
-}
-
-let timer = null;
-
-function setTimer() {
-  timer = setInterval(() => plusSLides(1), 3500)
-}
-
-setTimer();
-
-function playPauseSLides() {
-  let playPauseBtn = document.getElementById("play-pause-btn");
-  if (timer === null) {
-    setTimer();
-
-    playPauseBtn.style.backgroundPositionY = "-33px";
-  } else {
-    clearInterval(timer);
-    timer = null;
-    playPauseBtn.style.backgroundPositionY = "-0px";
-  }
-}
-
-function handleFormReset() {
-  let thankYouMessage = document.getElementById("thankyou");
-  let invalidEmail = document.getElementById("invalid-email");
-  let inputs = document.getElementsByClassName("form-inputs");
-  let buttons = document.getElementsByClassName("email-btn")
-
-  console.log("Form Reset")
-
-  for (let i = 0; i < inputs.length; i++) {
-    inputs[i].value = null;
-  }
-
-  if (thankYouMessage) {
-    thankYouMessage.style.display = "none";
-
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = false
-      buttons[i].style.backgroundColor = "#a8f1fe"
-    }
-  }
-
-  if (invalidEmail) {
-    invalidEmail.style.display = "none";
-
-    for (let i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = false
-      buttons[i].style.backgroundColor = "#a8f1fe"
-    }
-  }
-  return;
-}
-
 jQuery(document).ready(function($){
 	var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 170;
+		eventsMinDistance = 100;
 
 	(timelines.length > 0) && initTimeline(timelines);
 
@@ -265,8 +130,8 @@ jQuery(document).ready(function($){
 	function setDatePosition(timelineComponents, min) {
 		for (i = 0; i < timelineComponents['timelineDates'].length; i++) { 
 		    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
-		    	distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 0.1;
-        timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
+		    	distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
+		    timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
 		}
 	}
 
@@ -336,6 +201,7 @@ jQuery(document).ready(function($){
 		element.style["transform"] = property+"("+value+")";
 	}
 
+	//based on http://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript
 	function parseDate(events) {
 		var dateArrays = [];
 		events.each(function(){
@@ -371,6 +237,10 @@ jQuery(document).ready(function($){
 		return Math.min.apply(null, dateDistances);
 	}
 
+	/*
+		How to tell if a DOM element is visible in the current viewport?
+		http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+	*/
 	function elementInViewport(el) {
 		var top = el.offsetTop;
 		var left = el.offsetLeft;

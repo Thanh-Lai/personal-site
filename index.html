@@ -34,165 +34,184 @@
             </div>
         </nav>
     </header>
-    <!--Logo Section-->
-    <section class="logo-container">
-        <img id="logo" src="images/logo.png" />
-
-        <audio controls autoplay loop volume="0.5">
-            <!-- silence.mp3 for autoplay -->
-            <iframe src="audio/silence.mp3" allow="autoplay"></iframe>
-            <source src="audio/tranquil.mp3" type="audio/ogg">
-            <source src="audio/tranquil.mp3" type="audio/mpeg">
-        </audio>
-    </section>
     <!--Image Carousel Section-->
-    <section class="gallary-container">
-        <h3 id="gallary-name">Me Around the World</h3>
-        <div class="slide-show-container">
-            <div id="play-pause-btn" onclick="playPauseSLides()"></div>
-            <div class="left-arrow" onclick="plusSLides(-1)">
-                <span class="arrow arrow-left"></span>
+    <div id="gallary-bg">
+        <section class="gallary-container">
+            <img id="logo" src="images/logo.png" />
+            <h3 id="gallary-name">Me Around the World</h3>
+            <div class>
+                <div class="slide-show-container">
+                    <div id="play-pause-btn" onclick="playPauseSLides()"></div>
+                    <div class="left-arrow" onclick="plusSLides(-1)">
+                        <span class="arrow arrow-left"></span>
+                    </div>
+                    <div class="right-arrow" onclick="plusSLides(1)">
+                        <span class="arrow arrow-right"></span>
+                    </div>
+                    <div class="caption-holder">
+                        <p class="caption-text"></p>
+                    </div>
+                    <div class="image-holder">
+                        <div class="number-text">1 / 4</div>
+                        <img src="images/bg/maine.jpg">
+                        <p class="caption-text">Portland Head Lighthouse - Portland, Maine</p>
+                    </div>
+                    <div class="image-holder">
+                        <div class="number-text">2 / 4</div>
+                        <img src="images/bg/atlantic-ocean.jpg">
+                        <p class="caption-text">Somewhere on the Atlantic Ocean</p>
+                    </div>
+                    <div class="image-holder">
+                        <div class="number-text">3 / 4</div>
+                        <img src="images/bg/montreal.jpg">
+                        <p class="caption-text">Jacques Cartier Bridge - Montreal, Canada</p>
+                    </div>
+                    <div class="image-holder">
+                        <div class="number-text">4 / 4</div>
+                        <img src="images/bg/shanghai.jpg">
+                        <p class="caption-text">The Bund waterfront - Shanghai, China</p>
+                    </div>
+                </div>
+                <div id="dots-container"></div>
             </div>
-            <div class="right-arrow" onclick="plusSLides(1)">
-                <span class="arrow arrow-right"></span>
-            </div>
-            <div class="caption-holder">
-                <p class="caption-text"></p>
-            </div>
-            <div class="image-holder">
-                <div class="number-text">1 / 4</div>
-                <img src="images/bg/maine.jpg">
-                <p class="caption-text">Portland Head Lighthouse - Portland, Maine</p>
-            </div>
-            <div class="image-holder">
-                <div class="number-text">2 / 4</div>
-                <img src="images/bg/atlantic-ocean.jpg">
-                <p class="caption-text">Somewhere on the Atlantic Ocean</p>
-            </div>
-            <div class="image-holder">
-                <div class="number-text">3 / 4</div>
-                <img src="images/bg/montreal.jpg">
-                <p class="caption-text">Jacques Cartier Bridge - Montreal, Canada</p>
-            </div>
-            <div class="image-holder">
-                <div class="number-text">4 / 4</div>
-                <img src="images/bg/shanghai.jpg">
-                <p class="caption-text">The Bund waterfront - Shanghai, China</p>
-            </div>
-        </div>
-        <div id="dots-container"></div>
-    </section>
+        </section>
+    </div>
+
     <!--About Section -->
-    <section id="about">
-        <h2 class="sections">About Me</h2>
-        <div class="flex">
-            <div class="headshot" id="headshot">
-                <img src="images/profile-pic.png">
+    <div id="about-bg">
+        <section id="about">
+            <h2 class="sections">About Me</h2>
+            <div class="flex">
+                <div class="headshot" id="headshot">
+                    <img src="images/profile-pic.png">
+                </div>
+                <p class="text-up" id="about-me">
+                    <strong>Hi, my name is Thanh!</strong> I am a Software Engineer in New York City. My most enduring
+                    trait is my curiosity
+                    and that shows in my willingness to learn. My hobbies include watching my beloved Manchester
+                    United,
+                    taking tranquil hikes, and long directionless strolls. Besides computer science, I like to seek out
+                    long
+                    meaningful conversations
+                    in a range of topics include animals, history, science, politics, and geopolitics. I drink way too
+                    much
+                    bubble tea and I
+                    find myself watching too many dog videos on youtube. I have a notably horrendous track record of
+                    judging
+                    how long to microwave
+                    something and I strongly believe unsolicited pop ups are the root of all evil.
+                </p>
             </div>
-            <p class="text-up" id="about-me">
-                <strong>Hi, my name is Thanh!</strong> I am a Software Engineer in New York City. My most enduring
-                trait is my curiosity
-                and that shows in my willingness to learn. My hobbies include watching my beloved Manchester United,
-                taking tranquil hikes, and long directionless strolls. Besides computer science, I like to seek out long
-                meaningful conversations
-                in a range of topics include animals, history, science, politics, and geopolitics. I drink way too much
-                bubble tea and I
-                find myself watching too many dog videos on youtube. I have a notably horrendous track record of
-                judging
-                how long to microwave
-                something and I strongly believe unsolicited pop ups are the root of all evil.
-            </p>
-        </div>
-    </section>
+        </section>
+    </div>
     <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2 class="sections">My Portfolio</h2>
-        <div class="download" id="download-text">
-            <strong>Download my Resume!</strong>
-        </div>
-        <div class="download" id="download-resume">
-            <a href="resume/Thanh-Lai-Resume.pdf" download target="_blank">
-                <img id="resume-btn" src="images/download.png">
-            </a>
-        </div>
-        <!-- Project timeline -->
-        <div class="timeline">
-            <div class="container right text-up">
-                <div class="content">
-                    <h3 class="portfolio-title">December 2018: "Keep It Up"</h3 class="portfolio-title">
-                    <p>
-                        *In Progress
-                        <br>
-                        Developer:
-                        <span>
-                            <a href="https://github.com/keep-it-up/keep-it-up" target="_blank">GitHub</a>
-                        </span>
-                        <ul>
-                            <li>Developing a platform for users to keep track of their goals.</li>
-                            <li>Built with HTML, CSS, JavaScript, React, Redux, Node/Express.</li>
-                            <li>Users can create account, make new goals, record daily goals, and get points for
-                                accomplishing goals.</li>
-                        </ul>
-                    </p>
-                </div>
+    <div id="portfolio-bg">
+        <section id="portfolio">
+            <h2 class="sections">My Portfolio</h2>
+            <div class="download" id="download-text">
+                <strong>Download my Resume!</strong>
             </div>
-            <div class="container left text-up">
-                <div class="content">
-                    <h3 class="portfolio-title">November 2018: Personal Site</h3 class="portfolio-title">
-                    <p>
-                        Sole Developer:
-                        <span>
-                            <a href="https://github.com/Thanh-Lai/personal-site" target="_blank">GitHub</a>
-                            <a></a>
-                        </span>
-                        <ul>
-                            <li>Developed a personal portfolio website.</li>
-                            <li>Built with HTML, CSS, JavaScript, Gmail API, ScrollMagic, jQuery.</li>
-                            <li>Highly responsive design, animated, and users can send emails.</li>
-                        </ul>
-                    </p>
-                </div>
+            <div class="download" id="download-resume">
+                <a href="resume/Thanh-Lai-Resume.pdf" download target="_blank">
+                    <img id="resume-btn" src="images/download.png">
+                </a>
             </div>
-            <div class="container right text-up">
-                <div class="content">
-                    <h3 class="portfolio-title">July 2018: "Code O"</h3 class="portfolio-title">
-                    <p>
-                        Developer:
-                        <span>
-                            <a href="https://github.com/Code-O/Code-O" target="_blank">GitHub</a>
-                            <a href="http://code-o.herokuapp.com/" target="_blank">Live</a>
-                        </span>
-                        <ul>
-                            <li>Developed a platform to test the performance of a user’s javaScript code.</li>
-                            <li>Built with Node/Express, React, React-Redux, Sequelize, Docker, CORS, Victory, HTML5,
-                                CSS.</li>
-                            <li>Installed microservice server that runs a docker container which evaluates and measures
-                                input code.</li>
-                            <li>Implemented the functionality to evaluate the performance of a user’s code.</li>
-                            <li>Structured the data visualization graph with Victory using the data outputted from the
-                                docker container.</li>
-                        </ul>
-                    </p>
-                </div>
-            </div>
-            <div class="container left text-up">
-                <div class="content">
-                    <h3 class="portfolio-title">June 2018: "Leggo my Lego"</h3 class="portfolio-title">
-                    <p>
-                        Sole Developer:
-                        <span>
-                            <a href="https://github.com/Thanh-Lai/Stackathon-Leggo-my-Lego" target="_blank">GitHub</a>
-                            <a href="http://www.leggo-my-lego.com/" target="_blank">Live*</a>
-                        </span>
-                        <ul>
-                            <li>Developed a breakout game over a 4 day period using Phaser3.js, Webpack, Babel.</li>
-                            <li>Structured stages for each level and implemented game physics using Phaser3.js.</li>
-                        </ul>
-                        * May take a few seconds to load.
-                    </p>
-                </div>
-            </div>
-        </div>
+            <!-- Project timeline -->
+            <section class="cd-horizontal-timeline">
+                <div class="timeline">
+                    <div class="events-wrapper">
+                        <div class="events">
+                            <ol>
+                                <li><a href="#0" data-date="01/06/2018" class="selected">"Leggo my Lego"</a></li>
+                                <li><a href="#0" data-date="01/07/2018">"Code O"</a></li>
+                                <li><a href="#0" data-date="15/08/2018">"Personal portfolio"</a></li>
+                                <li><a href="#0" data-date="01/10/2018">"Keep it up"</a></li>
+                            </ol>
+
+                            <span class="filling-line" aria-hidden="true"></span>
+                        </div> <!-- .events -->
+                    </div> <!-- .events-wrapper -->
+
+                    <ul class="cd-timeline-navigation">
+                        <li><a href="#0" class="prev inactive">Prev</a></li>
+                        <li><a href="#0" class="next">Next</a></li>
+                    </ul> <!-- .cd-timeline-navigation -->
+                </div> <!-- .timeline -->
+
+                <div class="events-content">
+                    <ol>
+                        <li class="selected" data-date="01/06/2018">
+                            <h3>"Leggo my Lego"</h3>
+                            <em>June 2018</em>
+
+                            <p>
+                                Sole Developer:
+                                <span>
+                                    <a href="https://github.com/Thanh-Lai/Stackathon-Leggo-my-Lego" target="_blank">GitHub</a>
+                                    <a href="http://www.leggo-my-lego.com/" target="_blank">Live*</a>
+                                </span><br />
+                                &rArr; Developed a breakout game over a 4 day period using Phaser3.js, Webpack, Babel.<br />
+                                &rArr; Structured stages for each level and implemented game physics using Phaser3.js.
+                            </p>
+                        </li>
+
+                        <li data-date="01/07/2018">
+                            <h3>"Code O"</h3>
+                            <em>July 2018</em>
+
+                            <p>
+                                Developer:
+                                <span>
+                                    <a href="https://github.com/Code-O/Code-O" target="_blank">GitHub</a>
+                                    <a href="http://code-o.herokuapp.com/" target="_blank">Live</a>
+                                </span> <br />
+                                &rArr; Developed a platform to test the performance of a user’s javaScript code. <br />
+                                &rArr; Built with Node/Express, React, React-Redux, Sequelize, Docker, CORS, Victory, HTML5, CSS. <br />
+                                &rArr; Installed microservice server that runs a docker container which evaluates and measures input code. <br />
+                                &rArr; Implemented the functionality to evaluate the performance of a user’s code. <br />
+                                &rArr; Structured the data visualization graph with Victory using the data outputted from the docker container.
+                            </p>
+                        </li>
+
+                        <li data-date="15/08/2018">
+                            <h3>"Personal Portfolio"</h3>
+                            <em>November 2018</em>
+
+                            <p>
+                                Sole Developer:
+                                <span>
+                                    <a href="https://github.com/Thanh-Lai/personal-site" target="_blank">GitHub</a>
+                                    <a></a>
+                                </span> <br />
+                                &rArr; Developed a personal portfolio website.<br />
+                                &rArr; Built with HTML, CSS, JavaScript, Gmail API, ScrollMagic, jQuery.<br />
+                                &rArr; Highly responsive design, animated, and users can send emails.
+                            </p>
+                        </li>
+
+                        <li data-date="01/10/2018">
+                            <h3>"Keep it up"</h3>
+                            <em>December 2018</em>
+
+                            <p>
+                                *In Progress
+                                <br>
+                                Developer:
+                                <span>
+                                    <a href="https://github.com/keep-it-up/keep-it-up" target="_blank">GitHub</a>
+                                </span> <br>
+                                    &rArr; Developing a platform for users to keep track of their goals.<br>
+                                    &rArr; Built with HTML, CSS, JavaScript, React, Redux, Node/Express.<br>
+                                    &rArr; Users can create account, make new goals, record daily goals, and get points for accomplishing goals.
+                            </p>
+                        </li>
+
+
+                    </ol>
+                </div> <!-- .events-content -->
+            </section>
+    </div>
+
     </section>
     <!-- Contacts Section -->
     <section id="contact">
@@ -281,7 +300,7 @@
         </div>
         &nbsp &nbsp &nbsp
         <div id="footer-note">
-            <h5>Made by Thanh for Thanh</h5>
+            <h5>Made by Thanh</h5>
         </div>
     </footer>
     </div>
