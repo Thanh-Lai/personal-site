@@ -10,7 +10,7 @@ $(document).ready(function() {
             triggerHook: 0.9,
             // reverse: false
         })
-        .setClassToggle(this, 'fade-in')
+        .setClassToggle(this, 'unblurr')
         .addTo(controller);
     })
 
@@ -22,13 +22,21 @@ $(document).ready(function() {
     .setClassToggle('#headshot img', 'unblurr')
     .addTo(controller)
 
+    let timeline = new ScrollMagic.Scene({
+        triggerElement: '.cd-horizontal-timeline',
+        duration: '80%',
+        triggerHook: 0.8,
+    })
+    .setClassToggle('.cd-horizontal-timeline', 'unblurr')
+    .addTo(controller)
+
     $('.sections').each(function() {
         let sections = new ScrollMagic.Scene({
             triggerElement: this,
             duration: '100%',
             triggerHook: 0.8,
         })
-        .setClassToggle(this, 'appear')
+        .setClassToggle(this, 'unblurr')
         .addTo(controller)
     })
 
@@ -38,7 +46,7 @@ $(document).ready(function() {
             duration: '80%',
             triggerHook: 0.9
         })
-        .setClassToggle(this, 'scale')
+        .setClassToggle(this, 'unblurr')
         .addTo(controller);
     })
 

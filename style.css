@@ -426,12 +426,12 @@ header nav {
 
 /* ScrollMagic Animation */
 .sections {
-  opacity: 0;
-  transition: all 5s ease-in;
+  transition: all 2s ease-out;
+  filter: blur(20px);
 }
 
-.sections.appear {
-  opacity: 1;
+.sections.unblurr {
+  filter: blur(0);
 }
 
 /* About Section CSS */
@@ -454,14 +454,12 @@ header nav {
 }
 
 .text-up {
-  opacity: 0;
-
-  transition: all 5s ease-out;
+  transition: all 2s ease-out;
+  filter: blur(20px);
 }
 
-.text-up.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+.text-up.unblurr {
+  filter: blur(0);
 }
 
 .flex {
@@ -946,16 +944,23 @@ table {
     border-spacing: 0;
 }
 
-/* ScrollMagic Animation */
-.download {
-  opacity: 0;
-  transform: scale(0);
-  transition: all 5s ease;
+.cd-horizontal-timeline {
+  transition: all 2s ease-out;
+  filter: blur(20px);
 }
 
-.download.scale {
-  opacity: 1;
-  transform: scale(1);
+.cd-horizontal-timeline.unblurr {
+  filter: blur(0);
+}
+
+/* ScrollMagic Animation */
+.download {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.download.unblurr {
+  filter: blur(0);
 }
 
 #portfolio #download-resume {
