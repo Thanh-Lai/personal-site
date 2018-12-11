@@ -129,8 +129,7 @@ header nav {
 }
 
 #gallary-bg {
-  background-image: url("images/bg/bus.jpg");
-  background-repeat: no-repeat;
+  background-image: url("images/bg/castle.png");
   background-size: 100%;
 }
 
@@ -145,7 +144,7 @@ header nav {
   box-sizing: border-box;
   margin: 0px auto 0px auto;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* Move slides left */
@@ -448,7 +447,7 @@ header nav {
 }
 
 #about-bg {
-  background-image: url("images/bg/castle.png");
+  background-image: url("images/bg/sunflower.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -498,7 +497,7 @@ header nav {
 /* Portforlio CSS */
 
 #portfolio-bg {
-  background-image: url("images/bg/sunflower.jpg");
+  background-image: url("images/bg/town.jpg");
   background-size: 100%;
 }
 
@@ -1001,8 +1000,14 @@ table {
   box-shadow: 0px 0px 3px 1px #00000078;
   box-sizing: border-box;
   margin: 0px auto 0px auto;
-  background-color: antiquewhite;
+  background-color: white;
   padding-top: 10em;
+  opacity: 0.7;
+}
+
+#contact-bg {
+  background-image: url("images/bg/bus.jpg");
+  background-size: 100%;
 }
 
 /* ScrollMagic Animation */
@@ -1040,7 +1045,7 @@ table {
 
 /* Email Popup Animations */
 .popup-container {
-  background-color: antiquewhite;
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1057,7 +1062,7 @@ table {
   background-color: orange;
   color: black;
   padding: 1rem 2rem;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .button:hover {
@@ -1100,11 +1105,13 @@ table {
     max-height: 600px;
     width: 60%;
     height: 80%;
-    background-color: antiquewhite;
+    background-color: white;
     transform: rotate(32deg);
     transition: .64s ease-in-out;
   }
-
+  #field-txt {
+    color: blue;
+  }
   /* Popup texts */
 .popup .popup__text {
     display: flex;
@@ -1120,7 +1127,7 @@ table {
     font-weight: 600;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    color: rgba(4, 0, 255, 0.479);;
+    color: blue;
 }
 
 .popup .popup__text p {
