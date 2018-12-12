@@ -1080,7 +1080,7 @@ table {
 }
 
 .form-inputs {
-  background-color:gray;
+  background-color: #37474F;
   color: white;
 }
 
@@ -1582,7 +1582,7 @@ table {
   }
 }
 
-@media screen and (orientation:landscape) {
+@media screen and (orientation:portrait) {
 
   #about {
     font-size: 70%;
@@ -1610,9 +1610,6 @@ table {
   padding: 0;
   padding-bottom: 0;
   position: relative;
-}
-#message {
-  height: 20px;
 }
 
 .popup .popup__text {
