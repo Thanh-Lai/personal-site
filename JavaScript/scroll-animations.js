@@ -5,8 +5,8 @@ $(document).ready(function() {
     $('.text-up').each(function() {
         let textUp = new ScrollMagic.Scene({
             triggerElement: this,
-            duration: '90%',
-            triggerHook: 0.9,
+            duration: '100%',
+            triggerHook: 1,
         })
         .setClassToggle(this, 'unblurr')
         .addTo(controller);
@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     let headshot = new ScrollMagic.Scene({
         triggerElement: '#headshot img',
-        duration: '70%',
+        duration: '80%',
         triggerHook: 0.7,
     })
     .setClassToggle('#headshot img', 'unblurr')
@@ -22,8 +22,8 @@ $(document).ready(function() {
 
     let timeline = new ScrollMagic.Scene({
         triggerElement: '.cd-horizontal-timeline',
-        duration: '80%',
-        triggerHook: 0.8,
+        duration: '100%',
+        triggerHook: 1,
     })
     .setClassToggle('.cd-horizontal-timeline', 'unblurr')
     .addTo(controller)
@@ -41,7 +41,7 @@ $(document).ready(function() {
     $('.download').each(function() {
         let download = new ScrollMagic.Scene({
             triggerElement: this,
-            duration: '80%',
+            duration: '90%',
             triggerHook: 0.9
         })
         .setClassToggle(this, 'unblurr')
@@ -51,8 +51,8 @@ $(document).ready(function() {
     $('.contact-me').each(function() {
         let contacts = new ScrollMagic.Scene({
             triggerElement: this,
-            duration: '80%',
-            triggerHook: 0.9
+            duration: '100%',
+            triggerHook: 1
         })
         .setClassToggle(this, 'unblurr')
         .addTo(controller);

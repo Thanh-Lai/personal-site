@@ -1055,7 +1055,7 @@ table {
   box-sizing: border-box;
   margin: 0px auto 0px auto;
   background-color: white;
-  padding-top: 10em;
+  padding-top: 5em;
   opacity: 0.7;
 }
 
@@ -1075,17 +1075,13 @@ table {
   filter: blur(0);
 }
 
-.contact-form {
-  transition: all 2s ease-out;
-  filter: blur(20px);
-}
-
 #email-form {
   display: block;
 }
 
-.contact-form.unblurr {
-  filter: blur(0);
+.form-inputs {
+  background-color:gray;
+  color: white;
 }
 
 #contact .contact-info {
@@ -1259,6 +1255,13 @@ table {
 }
 
 /* Media Queries for responsive design */
+
+@media (max-width: 900px) {
+  #message {
+    width: 350px;
+    height: 100px;
+  }
+}
 
 @media (max-width: 800px) {
   .popup .popup__text h1 {
@@ -1436,6 +1439,9 @@ table {
     padding-top: 25px;
     font-size: 12px;
   }
+  #portfolio {
+    height: 250vh;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1463,6 +1469,7 @@ table {
   .footer {
     font-size: 12px;
   }
+
 }
 
 @media (max-width: 375px) {
@@ -1565,4 +1572,61 @@ table {
     margin: -45px;
     padding-left: 30px;
   }
+}
+@media screen and (orientation:landscape) {
+  .gallery-container {
+    height: 150vh;
+  }
+
+  #about {
+    /* height: 200vh; */
+    font-size: 70%;
+  }
+  #portfolio {
+    height: 250vh;
+  }
+  #contact {
+    padding-top: 1em;
+    height: 120vh;
+  }
+
+  #contact-field {
+    font-size: 10px;
+    /* height: 5px; */
+  }
+  .gform {
+    width: 100%;
+  }
+
+  .popup-container {
+    width: 200vw;
+ }
+
+ #email-me-text {
+  visibility: hidden;
+}
+
+#email-me-text::after {
+  content: "";
+  visibility: hidden;
+  padding: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+#message {
+  height: 20px;
+}
+
+.popup .popup__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  height: 70%;
+  padding-left: 1rem;
+}
+#email-fields {
+  height: 50%;
+ }
+
 }

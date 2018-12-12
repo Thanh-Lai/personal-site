@@ -1,4 +1,5 @@
-window.screen.lockOrientation('landscape');
+
+
 let prevScrollpos = window.pageYOffset;
 
 // Navbar appear and disapear
