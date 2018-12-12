@@ -2,62 +2,6 @@ $(document).ready(function() {
     //Init ScrollMagic
     let controller = new ScrollMagic.Controller();
 
-    $('.text-up').each(function() {
-        let textUp = new ScrollMagic.Scene({
-            triggerElement: this,
-            duration: '100%',
-            triggerHook: 1,
-        })
-        .setClassToggle(this, 'unblurr')
-        .addTo(controller);
-    })
-
-    let headshot = new ScrollMagic.Scene({
-        triggerElement: '#headshot img',
-        duration: '80%',
-        triggerHook: 0.7,
-    })
-    .setClassToggle('#headshot img', 'unblurr')
-    .addTo(controller)
-
-    let timeline = new ScrollMagic.Scene({
-        triggerElement: '.cd-horizontal-timeline',
-        duration: '100%',
-        triggerHook: 1,
-    })
-    .setClassToggle('.cd-horizontal-timeline', 'unblurr')
-    .addTo(controller)
-
-    $('.sections').each(function() {
-        let sections = new ScrollMagic.Scene({
-            triggerElement: this,
-            duration: '100%',
-            triggerHook: 0.8,
-        })
-        .setClassToggle(this, 'unblurr')
-        .addTo(controller)
-    })
-
-    $('.download').each(function() {
-        let download = new ScrollMagic.Scene({
-            triggerElement: this,
-            duration: '90%',
-            triggerHook: 0.9
-        })
-        .setClassToggle(this, 'unblurr')
-        .addTo(controller);
-    })
-
-    $('.contact-me').each(function() {
-        let contacts = new ScrollMagic.Scene({
-            triggerElement: this,
-            duration: '100%',
-            triggerHook: 1
-        })
-        .setClassToggle(this, 'unblurr')
-        .addTo(controller);
-    })
-
     let aboutFixed = new ScrollMagic.Scene({
         triggerElement: '#about-bg',
         triggerHook: 0,

@@ -426,16 +426,6 @@ header nav {
   overflow: hidden;
 }
 
-/* ScrollMagic Animation */
-.sections {
-  transition: all 2s ease-out;
-  filter: blur(20px);
-}
-
-.sections.unblurr {
-  filter: blur(0);
-}
-
 /* About Section CSS */
 #about {
   width: 100%;
@@ -463,15 +453,6 @@ header nav {
   height: 100%;
 }
 
-.text-up {
-  transition: all 2s ease-out;
-  filter: blur(20px);
-}
-
-.text-up.unblurr {
-  filter: blur(0);
-}
-
 .flex {
   display: flex;
 }
@@ -494,18 +475,6 @@ header nav {
   width: 95%;
   height: 350px;
 }
-
-/* ScrollMagic Animation */
-.headshot img {
-  transition: all 3s ease-out;
-  filter: blur(20px) grayscale(20%);
-}
-
-.headshot img.unblurr {
-  filter: blur(0) grayscale(0);
-}
-
-/* Portforlio CSS */
 
 #portfolio-bg {
   background-image: url("images/bg/sunflower.jpg");
@@ -1000,25 +969,6 @@ table {
     border-spacing: 0;
 }
 
-.cd-horizontal-timeline {
-  transition: all 2s ease-out;
-  filter: blur(20px);
-}
-
-.cd-horizontal-timeline.unblurr {
-  filter: blur(0);
-}
-
-/* ScrollMagic Animation */
-.download {
-  transition: all 2s ease-out;
-  filter: blur(20px);
-}
-
-.download.unblurr {
-  filter: blur(0);
-}
-
 #portfolio #download-resume {
   display: flex;
   align-items: center;
@@ -1054,7 +1004,7 @@ table {
   box-shadow: 0px 0px 3px 1px #00000078;
   box-sizing: border-box;
   margin: 0px auto 0px auto;
-  background-color: white;
+  background-color: whitesmoke;
   padding-top: 5em;
 }
 
@@ -1064,23 +1014,13 @@ table {
   height: 100%;
 }
 
-/* ScrollMagic Animation */
-.contact-me {
-  transition: all 2s ease-out;
-  filter: blur(20px);
-}
-
-.contact-me.unblurr {
-  filter: blur(0);
-}
-
 #email-form {
   display: block;
 }
 
 .form-inputs {
-  background-color: #37474F;
-  color: white;
+  /* background-color: ; */
+  color: black;
 }
 
 #contact .contact-info {
@@ -1157,7 +1097,7 @@ table {
     max-height: 600px;
     width: 60%;
     height: 80%;
-    background-color: white;
+    background-color: whitesmoke;
     transform: rotate(32deg);
     transition: .64s ease-in-out;
   }
@@ -1239,10 +1179,6 @@ table {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-#footer-note {
-  color: #cccccc;
 }
 
 .footer-nav {
