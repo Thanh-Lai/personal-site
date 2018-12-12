@@ -2,11 +2,10 @@ $(document).ready(function() {
     //Init ScrollMagic
     let controller = new ScrollMagic.Controller();
 
-    // ScrollMagic scenes
     $('.text-up').each(function() {
         let textUp = new ScrollMagic.Scene({
             triggerElement: this,
-            duration: '80%',
+            duration: '90%',
             triggerHook: 0.9,
             // reverse: false
         })
@@ -59,4 +58,19 @@ $(document).ready(function() {
         .setClassToggle(this, 'unblurr')
         .addTo(controller);
     })
+
+    let aboutFixed = new ScrollMagic.Scene({
+        triggerElement: '#about-bg',
+        triggerHook: 0,
+    })
+    .setClassToggle('#about-bg', 'fixed')
+    .addTo(controller)
+
+    let portfolioFixed = new ScrollMagic.Scene({
+        triggerElement: '#portfolio-bg',
+        triggerHook: 0,
+    })
+    .setClassToggle('#portfolio-bg', 'fixed')
+    .addTo(controller)
+
 });
