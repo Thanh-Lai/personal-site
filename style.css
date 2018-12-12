@@ -508,7 +508,7 @@ header nav {
 /* Portforlio CSS */
 
 #portfolio-bg {
-  background-image: url("images/bg/town.jpg");
+  background-image: url("images/bg/sunflower.jpg");
   background-size: cover;
   background-position: center;
   height: 100%;
@@ -1573,18 +1573,16 @@ table {
     padding-left: 30px;
   }
 }
+
 @media screen and (orientation:landscape) {
   .gallery-container {
     height: 150vh;
   }
 
   #about {
-    /* height: 200vh; */
     font-size: 70%;
   }
-  #portfolio {
-    height: 250vh;
-  }
+
   #contact {
     padding-top: 1em;
     height: 120vh;
@@ -1592,7 +1590,7 @@ table {
 
   #contact-field {
     font-size: 10px;
-    /* height: 5px; */
+
   }
   .gform {
     width: 100%;
@@ -1628,5 +1626,4 @@ table {
 #email-fields {
   height: 50%;
  }
-
 }
