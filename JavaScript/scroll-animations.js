@@ -7,7 +7,6 @@ $(document).ready(function() {
             triggerElement: this,
             duration: '90%',
             triggerHook: 0.9,
-            // reverse: false
         })
         .setClassToggle(this, 'unblurr')
         .addTo(controller);
