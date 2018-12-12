@@ -1575,17 +1575,9 @@ table {
 }
 
 @media screen and (orientation:landscape) {
-  .gallery-container {
-    height: 150vh;
-  }
 
   #about {
     font-size: 70%;
-  }
-
-  #contact {
-    padding-top: 1em;
-    height: 120vh;
   }
 
   #contact-field {
