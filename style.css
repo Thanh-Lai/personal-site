@@ -1498,6 +1498,10 @@ table {
     height: 200px;
     margin: -45px;
   }
+  .form-inputs {
+    width: 9em;
+  }
+  
 }
 
 @media (max-width: 350px) {
@@ -1537,7 +1541,11 @@ table {
    }
 
   .form-inputs {
-    width: 11em;
+    width: 7em;
+  }
+
+  #message {
+    width: 7em;
   }
 
   #invalid-text {
