@@ -6,14 +6,12 @@ body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   padding:10px 2px 0px 2px;
-  background-image: url("images/bg/bamboo-forest.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 p {
   color: #252525;
   line-height: 1.5em;
+  font-size: 20px;
 }
 
 h1 {
@@ -95,12 +93,6 @@ header nav {
   transition: top 0.3s;
 }
 
-audio {
-  margin: 0px auto 20px auto;
-  display: block;
-  background-color: gray;
-}
-
 .nav-item {
   height: 1.5em;
   margin: 0 1.5em 0 0;
@@ -136,10 +128,18 @@ audio {
   width: 30%;
 }
 
+#gallery-bg {
+  background-image: url("images/bg/castle.png");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100%;
+}
+
 /* Animations for Image Carousel */
-.gallary-container {
+.gallery-container {
   width: 100%;
-  height: 70vh;
+  height: 100vh;
   max-width: 1000px;
   user-select: none;
   box-shadow: 0px 0px 3px 1px #00000078;
@@ -147,18 +147,18 @@ audio {
   box-sizing: border-box;
   margin: 0px auto 0px auto;
   background-color: white;
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
 /* Move slides left */
-.gallary-container .move-left-current-slide {
+.gallery-container .move-left-current-slide {
   animation-name: move-left-current;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
-.gallary-container .move-left-next-slide {
+.gallery-container .move-left-next-slide {
   animation-name: move-left-next;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -186,14 +186,14 @@ audio {
 }
 
 /* Move slides right */
-.gallary-container .move-right-current-slide {
+.gallery-container .move-right-current-slide {
   animation-name: move-right-current;
   animation-duration: 0.5s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
-.gallary-container .move-right-next-slide {
+.gallery-container .move-right-next-slide {
   animation-name: move-right-next;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -253,7 +253,7 @@ audio {
   }
 }
 
-.gallary-container #gallary-name {
+.gallery-container #gallery-name {
   font-family: sans-serif;
   font-size: 20px;
   text-align: center;
@@ -262,7 +262,7 @@ audio {
 }
 
 /* Image dots */
-.gallary-container #dots-container {
+.gallery-container #dots-container {
   width: 100%;
   height: 10%;
   text-align: center;
@@ -270,7 +270,7 @@ audio {
   box-sizing: border-box;
 }
 
-.gallary-container #dots-container .dots {
+.gallery-container #dots-container .dots {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -281,24 +281,24 @@ audio {
   transition: background-color 0.5s;
 }
 
-.gallary-container #dots-container .dots:hover, .gallary-container #dots-container .dots.active {
+.gallery-container #dots-container .dots:hover, .gallery-container #dots-container .dots.active {
   background-color: #717171;
 }
 
-.gallary-container #dots-container .dots:first-child {
+.gallery-container #dots-container .dots:first-child {
   margin-left: 0;
 }
 
-.gallary-container .slide-show-container {
+.gallery-container .slide-show-container {
   width: 100%;
-  height: 90%;
+  height: 60vh;
   overflow: hidden;
   background-color: rgba(black, 0.5);
   position: relative;
 }
 
 /* Play pause btn */
-.gallary-container .slide-show-container #play-pause-btn {
+.gallery-container .slide-show-container #play-pause-btn {
   width: 32px;
   height: 32px;
   position: absolute;
@@ -312,30 +312,30 @@ audio {
   background-position-y: -33px;
 }
 
-.gallary-container .slide-show-container #play-pause-btn:hover {
+.gallery-container .slide-show-container #play-pause-btn:hover {
   width: 35px;
   height: 35px;
   opacity: 1;
 }
 
-.gallary-container .slide-show-container .image-holder {
+.gallery-container .slide-show-container .image-holder {
   width: 100%;
   height: 100%;
   position: absolute;
   opacity: 0;
 }
 
-.gallary-container .slide-show-container .image-holder img {
+.gallery-container .slide-show-container .image-holder img {
   width: 100%;
   height: 100%;    
 }
 
 /* Image text caption and number */
-.gallary-container .slide-show-container .image-holder .caption {
+.gallery-container .slide-show-container .image-holder .caption {
   display: none;
 }
 
-.gallary-container .slide-show-container .image-holder .number-text {
+.gallery-container .slide-show-container .image-holder .number-text {
   color: whitesmoke;
   font-size: 15px;
   margin-left: 5px;
@@ -345,7 +345,7 @@ audio {
 }
 
 /* CSS for right and left arrows */
-.gallary-container .slide-show-container .left-arrow, .gallary-container .slide-show-container .right-arrow {
+.gallery-container .slide-show-container .left-arrow, .gallery-container .slide-show-container .right-arrow {
   width: 50px;
   background: #00000036;
   position: absolute;
@@ -359,7 +359,7 @@ audio {
   border-bottom-right-radius: 10px;
 }
 
-.gallary-container .slide-show-container .right-arrow {
+.gallery-container .slide-show-container .right-arrow {
   left: auto;
   right: 0;
   border-top-left-radius: 0px;
@@ -368,12 +368,12 @@ audio {
   border-bottom-left-radius: 10px;
 }
 
-.gallary-container .slide-show-container .left-arrow:hover, .gallary-container .slide-show-container .right-arrow:hover {
+.gallery-container .slide-show-container .left-arrow:hover, .gallery-container .slide-show-container .right-arrow:hover {
   background: #000000a8;
   cursor: pointer;
 }
 
-.gallary-container .slide-show-container .arrow {
+.gallery-container .slide-show-container .arrow {
   display: inline-block;
   border: 3px solid whitesmoke;
   width: 10px;
@@ -388,15 +388,15 @@ audio {
   bottom:  0;
 }
 
-.gallary-container .slide-show-container .arrow.arrow-left {
+.gallery-container .slide-show-container .arrow.arrow-left {
   transform: rotateZ(-135deg);
 }
 
-.gallary-container .slide-show-container .arrow.arrow-right {
+.gallery-container .slide-show-container .arrow.arrow-right {
   transform: rotateZ(45deg);
 }
 
-.gallary-container .slide-show-container>.caption-holder {
+.gallery-container .slide-show-container>.caption-holder {
   position: absolute;
   bottom: 0;
   z-index: 1;
@@ -411,7 +411,7 @@ audio {
   overflow: hidden;
 }
 
-.gallary-container .slide-show-container>.caption-holder>.caption-text {
+.gallery-container .slide-show-container>.caption-holder>.caption-text {
   margin: 0;
   bottom: 0;
   z-index: 1;
@@ -428,18 +428,18 @@ audio {
 
 /* ScrollMagic Animation */
 .sections {
-  opacity: 0;
-  transition: all 5s ease-in;
+  transition: all 2s ease-out;
+  filter: blur(20px);
 }
 
-.sections.appear {
-  opacity: 1;
+.sections.unblurr {
+  filter: blur(0);
 }
 
 /* About Section CSS */
 #about {
   width: 100%;
-  height: 600px;
+  height: 100vh;
   max-width: 1000px;
   user-select: none;
   box-shadow: 0px 0px 3px 1px #00000078;
@@ -449,15 +449,27 @@ audio {
   opacity: 0.7;
 }
 
-.text-up {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: all 5s ease-out;
+#about-bg {
+  background-image: url("images/bg/sunflower.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
 }
 
-.text-up.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+#about-bg.fixed {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.text-up {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.text-up.unblurr {
+  filter: blur(0);
 }
 
 .flex {
@@ -472,7 +484,7 @@ audio {
   overflow: hidden;
   background-color: rgba(black, 0.5);
   position: relative;
-  
+  size: 60px;
 }
 
 #about #headshot img {
@@ -494,9 +506,24 @@ audio {
 }
 
 /* Portforlio CSS */
+
+#portfolio-bg {
+  background-image: url("images/bg/sunflower.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+}
+
+#portfolio-bg.fixed {
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
 #portfolio {
   width: 100%;
-  height: 1600px;
+  height:100vh;
   max-width: 1000px;
   user-select: none;
   box-shadow: 0px 0px 3px 1px #00000078;
@@ -506,16 +533,490 @@ audio {
   opacity: 0.7;
 }
 
-/* ScrollMagic Animation */
-.download {
+.cd-horizontal-timeline {
   opacity: 0;
-  transform: scale(0);
-  transition: all 5s ease;
+  margin: 2em auto;
+  width:90%;
+  height: 60%;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  transition: opacity 0.2s;
 }
 
-.download.scale {
+/* never visible - this is used in jQuery to check the current MQ */
+.cd-horizontal-timeline::before {
+  content: 'mobile';
+  display: none;
+}
+
+/* show the timeline after events position has been set (using JavaScript) */
+.cd-horizontal-timeline.loaded {
   opacity: 1;
-  transform: scale(1);
+}
+
+.cd-horizontal-timeline .timeline {
+  position: relative;
+  height: 100px;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cd-horizontal-timeline .events-wrapper {
+  position: relative;
+  height: 100%;
+  margin: 0 40px;
+  overflow: hidden;
+}
+
+/* these are used to create a shadow effect at the sides of the timeline */
+.cd-horizontal-timeline .events-wrapper::after, .cd-horizontal-timeline .events-wrapper::before {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  height: 100%;
+  width: 20px;
+}
+
+.cd-horizontal-timeline .events-wrapper::before {
+  left: 0;
+  background-image: -webkit-linear-gradient( left , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to right, #f8f8f8, rgba(248, 248, 248, 0));
+}
+
+.cd-horizontal-timeline .events-wrapper::after {
+  right: 0;
+  background-image: -webkit-linear-gradient( right , #f8f8f8, rgba(248, 248, 248, 0));
+  background-image: linear-gradient(to left, #f8f8f8, rgba(248, 248, 248, 0));
+}
+
+/* this is the black line/timeline */
+.cd-horizontal-timeline .events {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 49px;
+  height: 2px;
+  /* width will be set using JavaScript */
+  background: black;
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+/* this is used to create the green line filling the timeline */
+.cd-horizontal-timeline .filling-line {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color:  #1aa3ff;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+}
+
+.cd-horizontal-timeline .events a {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  font-size: 1.3rem;
+  padding-bottom: 15px;
+  color: black;
+  /* fix bug on Safari - text flickering while timeline translates */
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* this is used to create the event spot */
+.cd-horizontal-timeline .events a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: -5px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: #f8f8f8;
+  -webkit-transition: background-color 0.3s, border-color 0.3s;
+  -moz-transition: background-color 0.3s, border-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.no-touch .cd-horizontal-timeline .events a:hover::after {
+  background-color:  #1aa3ff;
+  border-color:  #1aa3ff;
+}
+
+.cd-horizontal-timeline .events a.selected {
+  pointer-events: none;
+}
+
+.cd-horizontal-timeline .events a.selected::after {
+  background-color:  #1aa3ff;
+  border-color:  #1aa3ff;
+}
+
+.cd-horizontal-timeline .events a.older-event::after {
+  border-color:  #1aa3ff;
+}
+
+@media only screen and (min-width: 1100px) {
+  .cd-horizontal-timeline {
+    margin: 6em auto;
+  }
+  .cd-horizontal-timeline::before {
+    /* never visible - this is used in jQuery to check the current MQ */
+    content: 'desktop';
+  }
+}
+
+/* these are the left/right arrows to navigate the timeline */
+.cd-timeline-navigation a {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  border: 2px solid #dfdfdf;
+  /* replace text with an icon */
+  overflow: hidden;
+  color: transparent;
+  text-indent: 100%;
+  white-space: nowrap;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+
+/* arrow icon */
+.cd-timeline-navigation a::after {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: url("images/arrow.svg") no-repeat 0 0;
+}
+
+.cd-timeline-navigation a.prev {
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  -moz-transform: translateY(-50%) rotate(180deg);
+  -ms-transform: translateY(-50%) rotate(180deg);
+  -o-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.cd-timeline-navigation a.next {
+  right: 0;
+}
+
+.no-touch .cd-timeline-navigation a:hover {
+  border-color:  #1aa3ff;
+}
+
+.cd-timeline-navigation a.inactive {
+  cursor: not-allowed;
+}
+
+.cd-timeline-navigation a.inactive::after {
+  background-position: 0 -16px;
+}
+
+.no-touch .cd-timeline-navigation a.inactive:hover {
+  border-color: #dfdfdf;
+}
+
+.cd-horizontal-timeline .events-content {
+  position: relative;
+  width: 100%;
+  margin: 2em 0;
+  overflow: hidden;
+  -webkit-transition: height 0.4s;
+  -moz-transition: height 0.4s;
+  transition: height 0.4s;
+}
+
+.cd-horizontal-timeline .events-content li {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  padding: 0 5%;
+  opacity: 0;
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+/* visible event content */
+.cd-horizontal-timeline .events-content li.selected {
+  position: relative;
+  z-index: 2;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.cd-horizontal-timeline .events-content li.enter-right, .cd-horizontal-timeline .events-content li.leave-right {
+  -webkit-animation-name: cd-enter-right;
+  -moz-animation-name: cd-enter-right;
+  animation-name: cd-enter-right;
+}
+
+.cd-horizontal-timeline .events-content li.enter-left, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-name: cd-enter-left;
+  -moz-animation-name: cd-enter-left;
+  animation-name: cd-enter-left;
+}
+
+.cd-horizontal-timeline .events-content li.leave-right, .cd-horizontal-timeline .events-content li.leave-left {
+  -webkit-animation-direction: reverse;
+  -moz-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.cd-horizontal-timeline .events-content li > * {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cd-horizontal-timeline .events-content h3 {
+  font-weight: bold;
+  font-size: 1rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cd-horizontal-timeline .events-content em {
+  display: block;
+  font-style: italic;
+  margin: 10px auto;
+}
+
+.cd-horizontal-timeline .events-content em::before {
+  content: '- ';
+}
+
+.cd-horizontal-timeline .events-content p {
+  font-size: 1rem;
+  color: black;
+}
+
+.cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
+  line-height: 1.6;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-horizontal-timeline .events-content h3 {
+    font-size: 1.8rem;
+  }
+  .cd-horizontal-timeline .events-content em {
+    font-size: 1.5rem;
+  }
+  .cd-horizontal-timeline .events-content p {
+    font-size: 1.4rem;
+  }
+}
+
+@-webkit-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-moz-keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+
+@keyframes cd-enter-right {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-moz-keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0%);
+  }
+}
+
+@keyframes cd-enter-left {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h3, h4, h5, h6, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 20%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.cd-horizontal-timeline {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.cd-horizontal-timeline.unblurr {
+  filter: blur(0);
+}
+
+/* ScrollMagic Animation */
+.download {
+  transition: all 2s ease-out;
+  filter: blur(20px);
+}
+
+.download.unblurr {
+  filter: blur(0);
 }
 
 #portfolio #download-resume {
@@ -544,143 +1045,24 @@ audio {
   opacity: 1;
 }
 
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: #DCDCDC;
-  font-family: Helvetica, sans-serif;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #f39c12;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.content {
-  padding: 10px 20px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-
-/* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
-}
-
 /* Contacts Section */
 #contact {
   width: 100%;
-  height: 570px;
+  height: 100vh;
   max-width: 1000px;
   user-select: none;
   box-shadow: 0px 0px 3px 1px #00000078;
   box-sizing: border-box;
   margin: 0px auto 0px auto;
-  background-color: antiquewhite;
+  background-color: white;
+  padding-top: 5em;
+  opacity: 0.7;
+}
+
+#contact-bg {
+  background-image: url("images/bg/bus.jpg");
+  background-size: cover;
+  height: 100%;
 }
 
 /* ScrollMagic Animation */
@@ -693,20 +1075,19 @@ audio {
   filter: blur(0);
 }
 
-.contact-form {
-  transition: all 2s ease-out;
-  filter: blur(20px);
+#email-form {
+  display: block;
 }
 
-.contact-form.unblurr {
-  filter: blur(0);
+.form-inputs {
+  background-color:gray;
+  color: white;
 }
 
 #contact .contact-info {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
 }
 
 .contact-field {
@@ -717,7 +1098,7 @@ audio {
 
 /* Email Popup Animations */
 .popup-container {
-  background-color: antiquewhite;
+  background-color: gray;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -734,7 +1115,7 @@ audio {
   background-color: orange;
   color: black;
   padding: 1rem 2rem;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .button:hover {
@@ -777,11 +1158,13 @@ audio {
     max-height: 600px;
     width: 60%;
     height: 80%;
-    background-color: antiquewhite;
+    background-color: white;
     transform: rotate(32deg);
     transition: .64s ease-in-out;
   }
-
+  #field-txt {
+    color: blue;
+  }
   /* Popup texts */
 .popup .popup__text {
     display: flex;
@@ -797,7 +1180,7 @@ audio {
     font-weight: 600;
     margin-bottom: 2rem;
     text-transform: uppercase;
-    color: rgba(4, 0, 255, 0.479);;
+    color: blue;
 }
 
 .popup .popup__text p {
@@ -872,23 +1255,15 @@ audio {
 }
 
 /* Media Queries for responsive design */
-@media (max-width: 1000px) {
-  #portfolio {
-    height: 1650px
-  }
-}
 
 @media (max-width: 900px) {
-  #portfolio {
-    height: 1750px
+  #message {
+    width: 350px;
+    height: 100px;
   }
 }
 
 @media (max-width: 800px) {
-  #portfolio {
-    height: 1950px
-  }
-
   .popup .popup__text h1 {
     font-size: 1.7rem;
     font-weight: 500;
@@ -914,9 +1289,6 @@ audio {
     height: 300px;
     margin-left: 9em;
   }
-  #portfolio {
-    height: 2150px
-  }
 
   .popup .popup__text h1 {
     font-size: 1.5rem;
@@ -924,20 +1296,12 @@ audio {
   }
 
   .popup .popup__text {
-
     padding: 3.5rem;
 }
 
   #message {
     width: 300px;
     height: 100px;
-  }
-
-}
-
-@media (max-width: 650px) {
-  #portfolio {
-    height: 2350px
   }
 }
 
@@ -954,10 +1318,6 @@ audio {
     width: 50%;
     height: 250px;
     margin-left: 8em;
-  }
-
-  #portfolio {
-    height: 1550px
   }
 
   #message {
@@ -987,9 +1347,8 @@ audio {
     content: "Lets get Coffee!";
     visibility: visible;
     display: block;
-    padding: 5px;
-    top: 50px;
-    position: absolute;
+    padding-bottom: 1em;
+    position: relative;
   }
   #email-fields {
    height: 500px;
@@ -1013,11 +1372,9 @@ audio {
     padding-top: 25px;
     font-size: 12px;
   }
-
 }
 
 @media (max-width: 500px) {
-
   .flex {
     display: block;
   }
@@ -1027,8 +1384,8 @@ audio {
     height: 250px;
   }
 
-  #portfolio {
-    height: 1650px
+  #about p {
+    font-size: 18px;
   }
 
   #message {
@@ -1041,19 +1398,18 @@ audio {
   }
 
   #email-me-text::after {
-    content: "Lets get Coffee!";
+    content: "Coffee?";
     visibility: visible;
     display: block;
     padding: 5px;
-    top: 50px;
-    position: absolute;
+    padding-bottom: 1em;
+    position: relative;
   }
-
 }
 
 @media (max-width: 450px) {
-  #portfolio {
-    height: 1850px
+  #about p {
+    font-size: 17px;
   }
 
   #message {
@@ -1083,6 +1439,9 @@ audio {
     padding-top: 25px;
     font-size: 12px;
   }
+  #portfolio {
+    height: 250vh;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1107,11 +1466,6 @@ audio {
     height: 200px;
     margin-left: 6em;
   }
-
-  #portfolio {
-    height: 1950px
-  }
-
   .footer {
     font-size: 12px;
   }
@@ -1122,17 +1476,9 @@ audio {
   .nav-item a {
     padding: 1px;
   }
-
-  #portfolio {
-    height: 2050px
-  }
 }
 
 @media (max-width: 360px) {
-  #portfolio {
-    height: 2150px
-  }
-
   #message {
     width: 120px;
     height: 50px;
@@ -1160,8 +1506,8 @@ audio {
     padding: 1px;
   }
 
-  #portfolio {
-    height: 2300px
+  #about p {
+    font-size: 15px;
   }
 
   #invalid-text {
@@ -1184,10 +1530,6 @@ audio {
   .nav-item a {
     font-size: 15px;
     padding: 1px;
-  }
-
-  #portfolio {
-    height: 2650px
   }
 
   #email-fields {
@@ -1230,4 +1572,50 @@ audio {
     margin: -45px;
     padding-left: 30px;
   }
+}
+
+@media screen and (orientation:landscape) {
+
+  #about {
+    font-size: 70%;
+  }
+
+  #contact-field {
+    font-size: 10px;
+
+  }
+  .gform {
+    width: 100%;
+  }
+
+  .popup-container {
+    width: 200vw;
+ }
+
+ #email-me-text {
+  visibility: hidden;
+}
+
+#email-me-text::after {
+  content: "";
+  visibility: hidden;
+  padding: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+#message {
+  height: 20px;
+}
+
+.popup .popup__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+  height: 70%;
+  padding-left: 1rem;
+}
+#email-fields {
+  height: 50%;
+ }
 }

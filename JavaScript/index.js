@@ -1,4 +1,5 @@
 
+
 let prevScrollpos = window.pageYOffset;
 
 // Navbar appear and disapear
