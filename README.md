@@ -16,11 +16,6 @@ Visit me at: http://www.thanh-lai.com/
 - ScrollMagic
 - jQuery
 
-## Take a Look
-
-<img align="center" width="500" height="350"
-     title="demo" src="./images/demo.gif">
-
 ## Contact Me
 
 - <a href="http://www.thanh-lai.com/" target="_blank" >Website</a>
