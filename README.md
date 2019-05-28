@@ -20,7 +20,7 @@ Visit me at: http://www.thanh-lai.com/
 
 - <p>Phone: (201) 993-8834</p>
 - <p>Email: tlai1122@gmail.com</p>
-- <a href="http://www.thanh-lai.com/" target="_blank" >Website</a>
+- <p><a href="http://www.thanh-lai.com/" target="_blank" >Website</a></p>
 - <a href="https://github.com/Thanh-Lai" target="_blank" >GitHub</a>
 - <a href="https://twitter.com/tlaiful" target="_blank" >Twitter</a>
 - <a href="https://www.linkedin.com/in/thanhlai/" target="_blank" >Linkedin</a>
